@@ -15,7 +15,7 @@ motivar --help
 - Frases em inglês e português
 - Configurável. Caso queira frases somente em inglês, basta configurar
 - Atualize a base de dados direto pelo CLI
-- Adicione mais endpoints para buscar frases
+- Adicione endpoints para aumentar a base da dados
 
 ## -
 
