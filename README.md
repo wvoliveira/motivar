@@ -7,7 +7,10 @@ Se mantenha motivado com frases incríveis direto do seu terminal.
 Basta baixar alguma release aqui e começar a usar.
 
 ```
-motivar --help
+$ motivar --help
+```
+
+```
               ._ o o
               \_´-)|_
            ,""       \
@@ -22,6 +25,25 @@ motivar --help
         Choose a language to show quotes [br,us] (default "br")
   -language string
         Choose a language to show quotes [br,us] (default "br")
+```
+
+Exemplo: 
+```
+$ motivar
+```
+
+```
+O liderado será reflexo da sua liderança, então quem espera lealdade, primeiro deve ser leal. Flávio Augusto.
+```
+
+Em inglês
+
+```
+$ motivar -l us
+```
+
+```
+Whatever you are, be a good one. Abraham Lincoln
 ```
 
 ## Funções

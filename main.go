@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"errors"
 	"flag"
 	"fmt"
 	"io/ioutil"
@@ -66,10 +67,12 @@ func init() {
 		fmt.Fprintf(CommandLine.Output(), "Usage of %s:\n", name)
 		flag.PrintDefaults()
 	}
-
 	flag.Parse()
 
 	readEnv()
+
+	err = checkLanguages()
+	check(err)
 }
 
 func main() {
@@ -88,9 +91,16 @@ func main() {
 
 func check(e error) {
 	if e != nil {
-		fmt.Printf("error: %+v", e)
+		fmt.Printf("error: %+v\n", e)
 		os.Exit(1)
 	}
+}
+
+func checkLanguages() error {
+	if !(flagLanguage == "br" || flagLanguage == "us") {
+		return errors.New("Language not supported. Use br or us")
+	}
+	return nil
 }
 
 func setup() error {
