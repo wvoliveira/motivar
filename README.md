@@ -6,18 +6,33 @@ Se mantenha motivado com frases incríveis direto do seu terminal.
 
 Basta baixar alguma release aqui e começar a usar.
 
-```bash
+```
 motivar --help
+              ._ o o
+              \_´-)|_
+           ,""       \
+         ,"  ## |   ಠ ಠ.
+       ," ##   ,-\__    ´.
+     ,"       /     ´--._;)
+   ,"     ## / Motivar v0.1
+ ,"   ##    /
+
+ Usage of motivar:
+  -l string
+        Choose a language to show quotes [br,us] (default "br")
+  -language string
+        Choose a language to show quotes [br,us] (default "br")
 ```
 
 ## Funções
 
 - Frases em inglês e português
-- Configurável. Caso queira frases somente em inglês, basta configurar
+- Configurável
 - Atualize a base de dados direto pelo CLI
-- Adicione endpoints para aumentar a base da 
+- Adicione endpoints para aumentar a base de frases
 - Modifique através de variáveis de ambiente ou arquivo de configuração
 
 ### Notes
 
-Inspirado em [motivate](https://github.com/mubaris/motivate).
+- Inspirado em [motivate](https://github.com/mubaris/motivate)
+- Ascii art: <https://c.r74n.com/textart>
