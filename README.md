@@ -4,7 +4,7 @@ Se mantenha motivado com frases incríveis direto do seu terminal.
 
 ## Instale
 
-Basta baixar alguma release aqui e começar a usar.
+Basta baixar o binário [aqui](https://github.com/wvoliveira/motivar/releases/) e começar a usar.
 
 ```
 $ motivar --help
