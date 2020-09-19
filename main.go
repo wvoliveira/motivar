@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
 	"io/ioutil"
 	"math/rand"
@@ -16,14 +17,28 @@ import (
 )
 
 var (
+	name    string = "motivar"
+	version string = "v0.1"
+
 	homeDir string
 
 	cfgDir     string
 	cfgFile    string
 	cfgDataDir string
 
-	quotesBR []phrase
-	quotesUS []phrase
+	flagLanguage string
+
+	banner string = fmt.Sprintf(`
+              ._ o o
+              \_´-)|_
+           ,""       \
+         ,"  ## |   ಠ ಠ. 
+       ," ##   ,-\__    ´.
+     ,"       /     ´--._;)
+   ,"     ## / Motivar %v
+ ,"   ##    /
+
+ `, version)
 )
 
 type phrase struct {
@@ -42,15 +57,32 @@ func init() {
 	err = setup()
 	check(err)
 
-	err = readPhrases("/data/br/")
-	check(err)
+	flag.StringVar(&flagLanguage, "language", "br", "Choose a language to show quotes [br,us]")
+	flag.StringVar(&flagLanguage, "l", "br", "Choose a language to show quotes [br,us]")
+
+	flag.Usage = func() {
+		var CommandLine = flag.NewFlagSet(os.Args[0], flag.ExitOnError)
+		fmt.Fprintf(CommandLine.Output(), banner)
+		fmt.Fprintf(CommandLine.Output(), "Usage of %s:\n", name)
+		flag.PrintDefaults()
+	}
+
+	flag.Parse()
+
+	readEnv()
 }
 
 func main() {
-	rand.Seed(time.Now().UnixNano())
-	v := rand.Intn(len(quotesBR)-1) + 1
+	pathLang := fmt.Sprintf("/data/%v/", flagLanguage)
 
-	q := quotesBR[v]
+	var quotes []phrase
+	err := readPhrases(pathLang, &quotes)
+	check(err)
+
+	rand.Seed(time.Now().UnixNano())
+	v := rand.Intn(len(quotes)-1) + 1
+
+	q := quotes[v]
 	fmt.Printf("%+v %+v\n", q.Quote, q.Author)
 }
 
@@ -99,7 +131,7 @@ func makeCfg() error {
 		return err
 	}
 
-	cfg.Section("").Key("languages").SetValue("br,us")
+	cfg.Section("").Key("language").SetValue("br")
 	err = cfg.SaveTo(cfgFile)
 	if err != nil {
 		return err
@@ -108,7 +140,7 @@ func makeCfg() error {
 	return nil
 }
 
-func readPhrases(path string) error {
+func readPhrases(path string, p *[]phrase) error {
 	pkger.Walk(path, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
@@ -123,7 +155,7 @@ func readPhrases(path string) error {
 				return err
 			}
 
-			err = json.Unmarshal(content, &quotesBR)
+			err = json.Unmarshal(content, &p)
 			if err != nil {
 				return err
 			}
@@ -132,4 +164,13 @@ func readPhrases(path string) error {
 	})
 
 	return nil
+}
+
+func readEnv() {
+	language := os.Getenv("MOTIVAR_LANGUAGE")
+	if language != "" {
+		if language == "br" || language == "us" {
+			flagLanguage = language
+		}
+	}
 }

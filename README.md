@@ -15,8 +15,9 @@ motivar --help
 - Frases em inglês e português
 - Configurável. Caso queira frases somente em inglês, basta configurar
 - Atualize a base de dados direto pelo CLI
-- Adicione endpoints para aumentar a base da dados
+- Adicione endpoints para aumentar a base da 
+- Modifique através de variáveis de ambiente ou arquivo de configuração
 
-## -
+### Notes
 
 Inspirado em [motivate](https://github.com/mubaris/motivate).
