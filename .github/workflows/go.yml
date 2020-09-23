@@ -25,9 +25,15 @@ jobs:
     - name: Get dependencies
       run: |
         go get -v -t -d ./...
+        
+    - name: Build	
+      run: go build -v .
 
     - name: Test
       run: go test ./...
+
+    - uses: colpal/actions-clean@v1
+    if: ${{ always() }} # To ensure this step runs even when earlier steps fail
 
   goreleaser:
     name: Go Releaser
