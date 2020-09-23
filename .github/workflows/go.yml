@@ -29,6 +29,9 @@ jobs:
     - name: Build
       run: go build -v .
 
+    - name: Test
+      run: go test ./...
+
   goreleaser:
     name: Go Releaser
     runs-on: ubuntu-latest
