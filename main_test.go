@@ -5,7 +5,7 @@ import (
 )
 
 func TestCheckLanguages(t *testing.T) {
-	langError := "Language not supported. Use 'br' or 'us'"
+	langError := "language not supported. Use 'br' or 'us'"
 	languages := []struct {
 		lang   string
 		result string

@@ -1,6 +1,6 @@
-package main
-
 //go:generate go run data/data_generate.go
+
+package main
 
 import (
 	"errors"
@@ -46,7 +46,8 @@ type Conf struct {
 
 var cfg Conf
 
-func init() {
+// Init use uppercase to not run automatically in the tests.
+func Init() {
 	homeDir, err := homedir.Dir()
 	die(err)
 
@@ -62,7 +63,7 @@ func init() {
 
 	flag.Usage = func() {
 		var CommandLine = flag.NewFlagSet(os.Args[0], flag.ExitOnError)
-		_, _ = fmt.Fprintf(CommandLine.Output(), Banner)
+		_, _ = fmt.Fprint(CommandLine.Output(), Banner)
 		_, _ = fmt.Fprintf(CommandLine.Output(), "Usage of %s:\n", Name)
 		flag.PrintDefaults()
 	}
@@ -164,6 +165,8 @@ func printPhrase(p data.Phrase) {
 }
 
 func main() {
+	Init()
+
 	if cfg.Language == "br" {
 		printPhrase(getRandomPhrase(data.PhrasesBR))
 		return
