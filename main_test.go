@@ -1,4 +1,4 @@
-package motivar
+package main
 
 import (
 	"testing"
