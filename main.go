@@ -1,10 +1,14 @@
 package main
 
+//go:generate go run data/data_generate.go
+
 import (
+	"errors"
 	"flag"
 	"fmt"
+	"github.com/wvoliveira/motivar/data"
+	"gopkg.in/ini.v1"
 	"math/rand"
-	"motivar/motivar"
 	"os"
 	"path"
 	"time"
@@ -12,46 +16,158 @@ import (
 	"github.com/mitchellh/go-homedir"
 )
 
-var cfg motivar.Conf
+const (
+	Name    = "motivar"
+	version = "v0.0.2"
+)
+
+var (
+	// Banner to show when run flags
+	Banner = fmt.Sprintf(`
+              ._ o o
+              \_´-)|_
+           ,""       \
+         ,"  ## |   ಠ ಠ. 
+       ," ##   ,-\__    ´.
+     ,"       /     ´--._;)
+   ,"     ## / Motivar %v
+ ,"   ##    /
+
+ `, version)
+)
+
+// Conf director/file struct
+type Conf struct {
+	Dir      string
+	File     string
+	DataDir  string
+	Language string
+}
+
+var cfg Conf
 
 func init() {
 	homeDir, err := homedir.Dir()
-	motivar.Check(err)
+	die(err)
 
 	cfg.Dir = path.Join(homeDir, ".motivar")
 	cfg.File = path.Join(cfg.Dir, "motivar.ini")
 	cfg.DataDir = path.Join(cfg.Dir, "data")
 
 	err = cfg.Setup()
-	motivar.Check(err)
+	die(err)
 
 	flag.StringVar(&cfg.Language, "language", "br", "Choose a language to show quotes [br,us]")
 	flag.StringVar(&cfg.Language, "l", "br", "Choose a language to show quotes [br,us]")
 
 	flag.Usage = func() {
 		var CommandLine = flag.NewFlagSet(os.Args[0], flag.ExitOnError)
-		fmt.Fprintf(CommandLine.Output(), motivar.Banner)
-		fmt.Fprintf(CommandLine.Output(), "Usage of %s:\n", motivar.Name)
+		_, _ = fmt.Fprintf(CommandLine.Output(), Banner)
+		_, _ = fmt.Fprintf(CommandLine.Output(), "Usage of %s:\n", Name)
 		flag.PrintDefaults()
 	}
 	flag.Parse()
 
 	cfg.ReadEnv()
 
-	err = motivar.CheckLanguages(cfg.Language)
-	motivar.Check(err)
+	err = CheckLanguages(cfg.Language)
+	die(err)
+}
+
+func die(e error) {
+	if e != nil {
+		fmt.Printf("error: %+v\n", e)
+		os.Exit(1)
+	}
+}
+
+// CheckLanguages check languages supported
+func CheckLanguages(lang string) error {
+	langs := []string{"br", "us"}
+
+	for _, l := range langs {
+		if lang == l {
+			return nil
+		}
+	}
+	return errors.New("language not supported. Use 'br' or 'us'")
+}
+
+// Setup func
+func (c Conf) Setup() error {
+	// check and create conf dir
+	if _, err := os.Stat(c.Dir); os.IsNotExist(err) {
+		err := os.Mkdir(c.Dir, 0764)
+		if err != nil {
+			return err
+		}
+	}
+
+	// check and create conf file
+	if _, err := os.Stat(c.File); os.IsNotExist(err) {
+		_, err := os.Create(c.File)
+		if err != nil {
+			return err
+		}
+
+		err = c.MakeConf()
+		if err != nil {
+			return err
+		}
+	}
+
+	// create data dir
+	if _, err := os.Stat(c.DataDir); os.IsNotExist(err) {
+		err := os.Mkdir(c.DataDir, 0764)
+		if err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
+// MakeConf func
+func (c Conf) MakeConf() error {
+	cfg, err := ini.Load(c.File)
+	if err != nil {
+		return err
+	}
+
+	cfg.Section("").Key("language").SetValue("br")
+	err = cfg.SaveTo(c.File)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+// ReadEnv read environment variables
+func (c Conf) ReadEnv() {
+	lang := os.Getenv("MOTIVAR_LANGUAGE")
+	if lang != "" {
+		err := CheckLanguages(lang)
+		if err == nil {
+			c.Language = lang
+		}
+	}
+}
+
+func getRandomPhrase(phrases []data.Phrase) (phrase data.Phrase) {
+	rand.New(rand.NewSource(time.Now().UnixNano()))
+	v := rand.Intn(len(phrases)-1) + 1
+	return phrases[v]
+}
+
+func printPhrase(p data.Phrase) {
+	fmt.Printf("%+v %+v\n", p.Quote, p.Author)
 }
 
 func main() {
-	pathLang := fmt.Sprintf("/data/%v/", cfg.Language)
+	if cfg.Language == "br" {
+		printPhrase(getRandomPhrase(data.PhrasesBR))
+		return
+	}
 
-	var quotes []motivar.Phrase
-	err := motivar.ReadPhrases(pathLang, &quotes)
-	motivar.Check(err)
-
-	rand.Seed(time.Now().UnixNano())
-	v := rand.Intn(len(quotes)-1) + 1
-
-	q := quotes[v]
-	fmt.Printf("%+v %+v\n", q.Quote, q.Author)
+	printPhrase(getRandomPhrase(data.PhrasesUS))
 }
