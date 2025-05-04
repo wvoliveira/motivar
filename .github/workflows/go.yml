@@ -15,19 +15,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: Set up Go 1.x
-      uses: actions/setup-go@v2
-      with:
-        go-version: ^1.15
-      id: go
+    - name: Checkout
+      uses: actions/checkout@v4
 
-    - name: Check out code into the Go module directory
-      uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v5
 
     - name: Get dependencies
       run: |
         go get -v -t -d ./...
-        
+
     - name: Run
       run: go run -v .
 
@@ -44,19 +41,17 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           
       - name: Set up Go
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.15
+        uses: actions/setup-go@v5
 
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v6
         with:
-          version: '~> v2'
+          version: v2.9.0
           args: release --clean
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
