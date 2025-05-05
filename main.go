@@ -165,12 +165,14 @@ func printPhrase(p data.Phrase) {
 }
 
 func main() {
-	Init()
+	//Init()
+	//
+	//if cfg.Language == "br" {
+	//	printPhrase(getRandomPhrase(data.PhrasesBR))
+	//	return
+	//}
+	//
+	//printPhrase(getRandomPhrase(data.PhrasesUS))
 
-	if cfg.Language == "br" {
-		printPhrase(getRandomPhrase(data.PhrasesBR))
-		return
-	}
-
-	printPhrase(getRandomPhrase(data.PhrasesUS))
+	fetchCSV("http://localhost:8000/quotes.csv")
 }
