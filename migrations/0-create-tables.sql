@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS phrases
     author      TEXT NOT NULL,
     phrase      TEXT NOT NULL,
     phrase_hash TEXT UNIQUE,
+    language     TEXT NOT NULL,
     created_at   DATETIME,
     updated_at   DATETIME,
     hash_id     TEXT NOT NULL

@@ -2,6 +2,7 @@ package data
 
 // Phrase phrases struct
 type Phrase struct {
-	Author string
-	Phrase string
+	Author   string
+	Phrase   string
+	Language string
 }

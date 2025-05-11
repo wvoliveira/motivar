@@ -26,6 +26,7 @@ type databasePhrase struct {
 	Author      string
 	Phrase      string
 	PhraseHash  string
+	Language    string
 	CreateAt    time.Time
 	UpdateAt    time.Time
 }
@@ -77,7 +78,7 @@ func (d *database) InsertPhrases(phrases []databasePhrase, contentHash string) (
 		return
 	}
 
-	stPhrase, err := tx.Prepare("INSERT INTO phrases (id, author, phrase, phrase_hash, created_at, updated_at, hash_id) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT(phrase_hash) DO NOTHING")
+	stPhrase, err := tx.Prepare("INSERT INTO phrases (id, author, phrase, phrase_hash, language, created_at, updated_at, hash_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(phrase_hash) DO NOTHING")
 	if err != nil {
 		return
 	}
@@ -95,7 +96,7 @@ func (d *database) InsertPhrases(phrases []databasePhrase, contentHash string) (
 	for _, item := range phrases {
 		phraseID := generateHashTimestamp()
 
-		_, err = stPhrase.Exec(phraseID, item.Author, item.Phrase, item.PhraseHash, now, now, hashID)
+		_, err = stPhrase.Exec(phraseID, item.Author, item.Phrase, item.PhraseHash, item.Language, now, now, hashID)
 		if err != nil {
 			return
 		}
@@ -105,8 +106,8 @@ func (d *database) InsertPhrases(phrases []databasePhrase, contentHash string) (
 	return
 }
 
-func (d *database) GetRandomPhrase() (data.Phrase, error) {
-	row := d.conn.QueryRow("SELECT phrase, author FROM phrases ORDER BY RANDOM() LIMIT 1")
+func (d *database) GetRandomPhrase(language string) (data.Phrase, error) {
+	row := d.conn.QueryRow("SELECT phrase, author FROM phrases WHERE language = ? ORDER BY RANDOM() LIMIT 1", language)
 
 	var phrase data.Phrase
 	err := row.Scan(&phrase.Phrase, &phrase.Author)

@@ -45,15 +45,20 @@ type Conf struct {
 }
 
 type Flags struct {
-	Language         string
-	Debug            bool
-	AddPhrasesFormat string
-	AddPhrasesURL    string
+	Language string
+	Debug    bool
+}
+
+type FlagsAdd struct {
+	Format   string
+	URL      string
+	Language string
 }
 
 var (
 	cfg           Conf
 	flags         Flags
+	flagsAdd      FlagsAdd
 	logg          *slog.Logger
 	cmdMain       *flag.FlagSet
 	cmdAddPhrases *flag.FlagSet
@@ -77,8 +82,9 @@ func main() {
 	cmdMain.StringVar(&flags.Language, "l", "br", "Choose a language to show quotes [br,us]")
 
 	cmdAddPhrases = flag.NewFlagSet("add-phrases", flag.ExitOnError)
-	cmdAddPhrases.StringVar(&flags.AddPhrasesFormat, "fmt", "csv", "Specify format phrases content [csv,json]")
-	cmdAddPhrases.StringVar(&flags.AddPhrasesURL, "url", "", "Specify URL to download from")
+	cmdAddPhrases.StringVar(&flagsAdd.Format, "fmt", "csv", "Specify format phrases content [csv,json]")
+	cmdAddPhrases.StringVar(&flagsAdd.URL, "url", "", "Specify URL to download from")
+	cmdAddPhrases.StringVar(&flagsAdd.Language, "language", "", "The language of phrases [br,us]")
 
 	cmdMain.Usage = func() {
 		var cmd = flag.NewFlagSet(os.Args[0], flag.ExitOnError)
@@ -97,11 +103,17 @@ func main() {
 		switch os.Args[1] {
 		case "add-phrases":
 			cmdAddPhrases.Parse(os.Args[2:])
-			if flags.AddPhrasesFormat == "" || flags.AddPhrasesURL == "" {
+			if flagsAdd.Format == "" || flagsAdd.URL == "" || flagsAdd.Language == "" {
 				cmdAddPhrases.Usage()
 				return
 			}
-			err := fetchAndSave(&db, flags.AddPhrasesFormat, flags.AddPhrasesURL)
+			err = CheckLanguages(flagsAdd.Language)
+			die(err)
+
+			err = CheckFormat(flagsAdd.Format)
+			die(err)
+
+			err := fetchAndSave(&db, flagsAdd.Format, flagsAdd.URL, flagsAdd.Language)
 			die(err)
 			return
 		}
@@ -117,26 +129,23 @@ func main() {
 	err = CheckLanguages(flags.Language)
 	die(err)
 
+	var phrasesData []data.Phrase
 	switch flags.Language {
 	case "br":
-		phrase, err := getRandomPhrase(data.PhrasesBR, nil)
-		if err != nil {
-			fmt.Println(err)
-		}
-
-		printPhrase(phrase)
-		return
+		phrasesData = data.PhrasesBR
 	case "us":
-		phrase, err := getRandomPhrase(data.PhrasesUS, &db)
-		if err != nil {
-			fmt.Println(err)
-		}
-		printPhrase(phrase)
-		return
+		phrasesData = data.PhrasesUS
 	default:
 		fmt.Println("Unsupported language")
 		return
 	}
+
+	phrase, err := getRandomPhrase(flags.Language, phrasesData, &db)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	printPhrase(phrase)
 }
 
 func initDatabase() database {
@@ -149,7 +158,7 @@ func initDatabase() database {
 
 func die(e error) {
 	if e != nil {
-		slog.Error(e.Error())
+		fmt.Sprintln(e.Error())
 		os.Exit(1)
 	}
 }
@@ -164,6 +173,18 @@ func CheckLanguages(lang string) error {
 		}
 	}
 	return errors.New("language not supported. Use 'br' or 'us'")
+}
+
+// CheckFormat check format supported
+func CheckFormat(format string) error {
+	langs := []string{"csv", "json"}
+
+	for _, l := range langs {
+		if format == l {
+			return nil
+		}
+	}
+	return errors.New("format not supported. Use \"csv\" or \"json\"")
 }
 
 // Setup func
@@ -226,13 +247,14 @@ func (f Flags) ReadEnv() {
 	}
 }
 
-func getRandomPhrase(phrases []data.Phrase, db *database) (phrase data.Phrase, err error) {
+func getRandomPhrase(language string, phrases []data.Phrase, db *database) (phrase data.Phrase, err error) {
 	rand.New(rand.NewSource(time.Now().UnixNano()))
 
-	if db != nil {
-		randomNumber := rand.Intn(100)
-		if randomNumber < 50 {
-			return db.GetRandomPhrase()
+	randomNumber := rand.Intn(2)
+	if randomNumber == 1 {
+		phrase, err = db.GetRandomPhrase(language)
+		if phrase.Phrase != "" {
+			return
 		}
 	}
 

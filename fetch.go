@@ -22,12 +22,9 @@ import (
 
 const BodyMaxLength = 200000
 
-func fetchAndSave(db *database, kind string, url string) (err error) {
-	if kind == "" || url == "" {
-		return errors.New("kind or url is empty")
-	}
-	if kind != "csv" && kind != "json" {
-		return errors.New("kind must be csv or json")
+func fetchAndSave(db *database, kind, url, language string) (err error) {
+	if kind == "" || url == "" || language == "" {
+		return errors.New("kind, url or language is empty")
 	}
 
 	if kind == "csv" {
@@ -56,7 +53,7 @@ func fetchAndSave(db *database, kind string, url string) (err error) {
 		}
 
 		logg.Info("Parse CSV content to language object.")
-		phrases, err := csvParse(csvLines, url, contentHash)
+		phrases, err := csvParse(csvLines, url, language, contentHash)
 		if err != nil {
 			return err
 		}
@@ -120,7 +117,7 @@ func convertToCSV(body []byte) (csvLines [][]string, err error) {
 	return csvLines, nil
 }
 
-func csvParse(csvLines [][]string, url, hash string) (dp []databasePhrase, err error) {
+func csvParse(csvLines [][]string, url, language, hash string) (dp []databasePhrase, err error) {
 	// Here we jump the first line to not process the headers.
 	// Maybe a flag or describe in help message to warn the final user?
 	for _, line := range csvLines[1:] {
@@ -144,6 +141,7 @@ func csvParse(csvLines [][]string, url, hash string) (dp []databasePhrase, err e
 			Author:      line[0],
 			Phrase:      line[1],
 			PhraseHash:  phraseHash,
+			Language:    language,
 		}
 		dp = append(dp, phrase)
 	}
