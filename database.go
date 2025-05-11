@@ -4,21 +4,30 @@ import (
 	"crypto/rand"
 	"crypto/sha1"
 	"database/sql"
+	"embed"
 	"encoding/binary"
+	"errors"
 	"github.com/mitchellh/go-homedir"
-	"log"
+	"github.com/wvoliveira/motivar/data"
+	"log/slog"
 	"math"
 	_ "modernc.org/sqlite"
+	"os"
 	"path"
 	"time"
 )
 
+//go:embed all:migrations
+var embedContent embed.FS
+
 type databasePhrase struct {
-	URL      string
-	URLHash  string
-	Author   string
-	Phrase   string
-	CreateAt time.Time
+	URL         string
+	ContentHash string
+	Author      string
+	Phrase      string
+	PhraseHash  string
+	CreateAt    time.Time
+	UpdateAt    time.Time
 }
 
 type database struct {
@@ -30,7 +39,6 @@ func (d *database) New() {
 	die(err)
 
 	dbFile := path.Join(homeDir, ".motivar", "data", "database.db")
-	log.Println(dbFile)
 
 	d.conn, err = sql.Open("sqlite", dbFile)
 	die(err)
@@ -42,42 +50,83 @@ func (d *database) ConnectAndTest() {
 	die(err)
 }
 
-func (d *database) CreateTable() {
-	_, err := d.conn.Exec(`
-		CREATE TABLE IF NOT EXISTS phrases (
-			id INTEGER PRIMARY KEY,
-			url TEXT NOT NULL,
-			url_hash TEXT NOT NULL,
-			author TEXT NOT NULL,
-			phrase TEXT NOT NULL,
-			create_at DATETIME
-		)
-	`)
-	die(err)
+func (d *database) RunMigrations() {
+	dir, err := embedContent.ReadDir("migrations")
+	if err != nil {
+		slog.Error("Error reading migrations folder: %v", err)
+		os.Exit(1)
+	}
+	for _, file := range dir {
+		sqlContent, err := embedContent.ReadFile("migrations/" + file.Name())
+		die(err)
+
+		_, err = d.conn.Exec(string(sqlContent))
+		die(err)
+	}
 }
 
-func (d *database) InsertPhrases(phrases []databasePhrase) {
+func (d *database) InsertPhrases(phrases []databasePhrase, contentHash string) (err error) {
 	tx, err := d.conn.Begin()
-	die(err)
+	if err != nil {
+		return
+	}
 
 	defer tx.Rollback()
-	//_, err := d.conn.Exec("INSERT INTO phrases (id, url, url_hash, author, phrase) VALUES (?, ?, ?, ?, ?)", generateHashTimestamp(), p.URL, p.URLHash, p.Author, p.Phrase)
-	stmt, err := tx.Prepare("INSERT INTO phrases (id, url, url_hash, author, phrase, create_at) VALUES (?, ?, ?, ?, ?, ?)")
-	die(err)
+	stHash, err := tx.Prepare("INSERT INTO hashes (id, url, content_hash, created_at, updated_at) VALUES (?, ?, ?, ?, ?)")
+	if err != nil {
+		return
+	}
 
-	defer stmt.Close()
+	stPhrase, err := tx.Prepare("INSERT INTO phrases (id, author, phrase, phrase_hash, created_at, updated_at, hash_id) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT(phrase_hash) DO NOTHING")
+	if err != nil {
+		return
+	}
+
+	defer stHash.Close()
+	defer stPhrase.Close()
 
 	now := time.Now()
+	hashID := generateHashTimestamp()
+	_, err = stHash.Exec(hashID, phrases[0].URL, contentHash, now, now)
+	if err != nil {
+		return
+	}
+
 	for _, item := range phrases {
-		hash := generateHashTimestamp()
-		_, err = stmt.Exec(hash, item.URL, item.URLHash, item.Author, item.Phrase, now)
-		die(err)
+		phraseID := generateHashTimestamp()
+
+		_, err = stPhrase.Exec(phraseID, item.Author, item.Phrase, item.PhraseHash, now, now, hashID)
+		if err != nil {
+			return
+		}
 	}
 
 	err = tx.Commit()
-	die(err)
+	return
+}
 
-	log.Println("Batch insert successful")
+func (d *database) GetRandomPhrase() (data.Phrase, error) {
+	row := d.conn.QueryRow("SELECT phrase, author FROM phrases ORDER BY RANDOM() LIMIT 1")
+
+	var phrase data.Phrase
+	err := row.Scan(&phrase.Phrase, &phrase.Author)
+	if err != nil {
+		return phrase, err
+	}
+	return phrase, nil
+}
+
+func (d *database) contentHashExists(hash string) (bool, error) {
+	row := d.conn.QueryRow("SELECT 1 FROM hashes WHERE content_hash = ? LIMIT 1", hash)
+
+	var temp int
+	err := row.Scan(&temp)
+	if errors.Is(err, sql.ErrNoRows) {
+		return false, nil
+	} else if err != nil {
+		return false, err
+	}
+	return true, nil
 }
 
 func generateHashTimestamp() int64 {

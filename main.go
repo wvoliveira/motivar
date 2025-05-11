@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"github.com/wvoliveira/motivar/data"
 	"gopkg.in/ini.v1"
+	"log/slog"
 	"math/rand"
 	"os"
 	"path"
@@ -18,7 +19,7 @@ import (
 
 const (
 	Name    = "motivar"
-	version = "v0.0.2"
+	version = "v0.1.0"
 )
 
 var (
@@ -36,18 +37,31 @@ var (
  `, version)
 )
 
-// Conf director/file struct
+// Conf directory/file struct
 type Conf struct {
-	Dir      string
-	File     string
-	DataDir  string
-	Language string
+	Dir     string
+	File    string
+	DataDir string
 }
 
-var cfg Conf
+type Flags struct {
+	Language         string
+	Debug            bool
+	AddPhrasesFormat string
+	AddPhrasesURL    string
+}
 
-// Init use uppercase to not run automatically in the tests.
-func Init() {
+var (
+	cfg           Conf
+	flags         Flags
+	logg          *slog.Logger
+	cmdMain       *flag.FlagSet
+	cmdAddPhrases *flag.FlagSet
+)
+
+func main() {
+	logg = NewLogger()
+
 	homeDir, err := homedir.Dir()
 	die(err)
 
@@ -58,26 +72,84 @@ func Init() {
 	err = cfg.Setup()
 	die(err)
 
-	flag.StringVar(&cfg.Language, "language", "br", "Choose a language to show quotes [br,us]")
-	flag.StringVar(&cfg.Language, "l", "br", "Choose a language to show quotes [br,us]")
+	cmdMain = flag.NewFlagSet("", flag.ExitOnError)
+	cmdMain.BoolVar(&flags.Debug, "debug", false, "Enable debug mode")
+	cmdMain.StringVar(&flags.Language, "l", "br", "Choose a language to show quotes [br,us]")
 
-	flag.Usage = func() {
-		var CommandLine = flag.NewFlagSet(os.Args[0], flag.ExitOnError)
-		_, _ = fmt.Fprint(CommandLine.Output(), Banner)
-		_, _ = fmt.Fprintf(CommandLine.Output(), "Usage of %s:\n", Name)
-		flag.PrintDefaults()
+	cmdAddPhrases = flag.NewFlagSet("add-phrases", flag.ExitOnError)
+	cmdAddPhrases.StringVar(&flags.AddPhrasesFormat, "fmt", "csv", "Specify format phrases content [csv,json]")
+	cmdAddPhrases.StringVar(&flags.AddPhrasesURL, "url", "", "Specify URL to download from")
+
+	cmdMain.Usage = func() {
+		var cmd = flag.NewFlagSet(os.Args[0], flag.ExitOnError)
+		_, _ = fmt.Fprint(cmd.Output(), Banner)
+		_, _ = fmt.Fprintf(cmd.Output(), "Usage of %s:\n", Name)
+		cmdMain.PrintDefaults()
+
+		_, _ = fmt.Fprintf(cmd.Output(), "Usage of subcommand %s:\n", cmdAddPhrases.Name())
+		cmdAddPhrases.PrintDefaults()
 	}
-	flag.Parse()
+	cmdAddPhrases.Usage = cmdMain.Usage
 
-	cfg.ReadEnv()
+	db := initDatabase()
 
-	err = CheckLanguages(cfg.Language)
+	if len(os.Args) > 1 {
+		switch os.Args[1] {
+		case "add-phrases":
+			cmdAddPhrases.Parse(os.Args[2:])
+			if flags.AddPhrasesFormat == "" || flags.AddPhrasesURL == "" {
+				cmdAddPhrases.Usage()
+				return
+			}
+			err := fetchAndSave(&db, flags.AddPhrasesFormat, flags.AddPhrasesURL)
+			die(err)
+			return
+		}
+	}
+
+	cmdMain.Parse(os.Args[1:])
+	flags.ReadEnv()
+
+	if flags.Debug {
+		slog.SetLogLoggerLevel(slog.LevelDebug)
+	}
+
+	err = CheckLanguages(flags.Language)
 	die(err)
+
+	switch flags.Language {
+	case "br":
+		phrase, err := getRandomPhrase(data.PhrasesBR, nil)
+		if err != nil {
+			fmt.Println(err)
+		}
+
+		printPhrase(phrase)
+		return
+	case "us":
+		phrase, err := getRandomPhrase(data.PhrasesUS, &db)
+		if err != nil {
+			fmt.Println(err)
+		}
+		printPhrase(phrase)
+		return
+	default:
+		fmt.Println("Unsupported language")
+		return
+	}
+}
+
+func initDatabase() database {
+	db := database{}
+	db.New()
+	db.ConnectAndTest()
+	db.RunMigrations()
+	return db
 }
 
 func die(e error) {
 	if e != nil {
-		fmt.Printf("error: %+v\n", e)
+		slog.Error(e.Error())
 		os.Exit(1)
 	}
 }
@@ -144,35 +216,30 @@ func (c Conf) MakeConf() error {
 }
 
 // ReadEnv read environment variables
-func (c Conf) ReadEnv() {
+func (f Flags) ReadEnv() {
 	lang := os.Getenv("MOTIVAR_LANGUAGE")
 	if lang != "" {
 		err := CheckLanguages(lang)
 		if err == nil {
-			c.Language = lang
+			f.Language = lang
 		}
 	}
 }
 
-func getRandomPhrase(phrases []data.Phrase) (phrase data.Phrase) {
+func getRandomPhrase(phrases []data.Phrase, db *database) (phrase data.Phrase, err error) {
 	rand.New(rand.NewSource(time.Now().UnixNano()))
+
+	if db != nil {
+		randomNumber := rand.Intn(100)
+		if randomNumber < 50 {
+			return db.GetRandomPhrase()
+		}
+	}
+
 	v := rand.Intn(len(phrases)-1) + 1
-	return phrases[v]
+	return phrases[v], nil
 }
 
 func printPhrase(p data.Phrase) {
-	fmt.Printf("%+v %+v\n", p.Quote, p.Author)
-}
-
-func main() {
-	//Init()
-	//
-	//if cfg.Language == "br" {
-	//	printPhrase(getRandomPhrase(data.PhrasesBR))
-	//	return
-	//}
-	//
-	//printPhrase(getRandomPhrase(data.PhrasesUS))
-
-	fetchCSV("http://localhost:8000/quotes.csv")
+	fmt.Printf("%+v %+v\n", p.Phrase, p.Author)
 }

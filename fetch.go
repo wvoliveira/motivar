@@ -5,8 +5,9 @@ import (
 	"crypto/sha256"
 	"encoding/csv"
 	"encoding/hex"
+	"errors"
 	"fmt"
-	"log"
+	"log/slog"
 	"net/http"
 	"os"
 )
@@ -17,24 +18,68 @@ import (
 // - JSON: https://raw.githubusercontent.com/AtaGowani/daily-motivation/refs/heads/master/src/data/quotes.json
 //
 // Supported file types: csv and json.
-// This is more slowly because golang will read the files in realtime.
+// Use files in the samples folder to develop some fetch feature.
 
 const BodyMaxLength = 200000
 
-func fetchCSV(url string) ([]byte, error) {
-	// TODO: Move this to main function.
-	db := database{}
-	db.New()
-	db.ConnectAndTest()
-	db.CreateTable()
+func fetchAndSave(db *database, kind string, url string) (err error) {
+	if kind == "" || url == "" {
+		return errors.New("kind or url is empty")
+	}
+	if kind != "csv" && kind != "json" {
+		return errors.New("kind must be csv or json")
+	}
 
+	if kind == "csv" {
+		logg.Info(fmt.Sprintf("Fetching %s", url))
+		content, contentHash, err := csvFetch(url)
+		if err != nil {
+			return err
+		}
+		logg.Debug(fmt.Sprintf("Hash of content: %s", contentHash))
+
+		logg.Info("Trying to convert bytes to CSV format...")
+		csvLines, err := convertToCSV(content)
+		if err != nil {
+			return err
+		}
+
+		logg.Info("Checking if hash content exists in database.")
+		exists, err := db.contentHashExists(contentHash)
+		if err != nil {
+			return err
+		}
+
+		if exists {
+			logg.Warn("This content already exists in the database. Exiting...")
+			os.Exit(1)
+		}
+
+		logg.Info("Parse CSV content to language object.")
+		phrases, err := csvParse(csvLines, url, contentHash)
+		if err != nil {
+			return err
+		}
+
+		logg.Info("Inserting in the database...")
+		err = db.InsertPhrases(phrases, contentHash)
+		if err != nil {
+			return err
+		}
+
+		logg.Info("OK, phrases into database.")
+	}
+	return nil
+}
+
+func csvFetch(url string) ([]byte, string, error) {
 	resp, err := http.Get(url)
 	die(err)
 
 	defer resp.Body.Close()
 
 	if resp.StatusCode != 200 {
-		log.Printf("Error fetching %s: %d", url, resp.StatusCode)
+		slog.Error("Fetching %s: %d", url, resp.StatusCode)
 		os.Exit(1)
 	}
 
@@ -53,23 +98,29 @@ func fetchCSV(url string) ([]byte, error) {
 		length += n
 
 		if length > BodyMaxLength {
-			die(fmt.Errorf("the body (%v) exceeded the limit (%v)", length, BodyMaxLength))
+			slog.Error("the body (%v) exceeded the limit (%v)", length, BodyMaxLength)
+			os.Exit(1)
 		}
 	}
+	contentHash := generateHash(string(body))
 
-	log.Printf("Size is %d\n", length)
-	hash := generateHash(string(body))
-	log.Println(hash)
+	// TODO:
+	// - Check if this hash already in the database.
+	// - Check if phrase hash exists in the database.
 
-	// TODO: Check if this hash already in the database.
+	return body, contentHash, nil
+}
 
+func convertToCSV(body []byte) (csvLines [][]string, err error) {
 	reader := csv.NewReader(bytes.NewReader(body))
-	csvLines, err := reader.ReadAll()
-	die(err)
+	csvLines, err = reader.ReadAll()
+	if err != nil {
+		return [][]string{}, err
+	}
+	return csvLines, nil
+}
 
-	log.Println("OK, body content is a valid CSV format.")
-	var dp []databasePhrase
-
+func csvParse(csvLines [][]string, url, hash string) (dp []databasePhrase, err error) {
 	// Here we jump the first line to not process the headers.
 	// Maybe a flag or describe in help message to warn the final user?
 	for _, line := range csvLines[1:] {
@@ -81,24 +132,22 @@ func fetchCSV(url string) ([]byte, error) {
 
 		// Don't input in database if author or phrase is empty.
 		if line[0] == "" || line[1] == "" {
-			log.Printf("Author or phrase is empty: author=\"%s\" phrase=\"%s\"", line[0], line[1])
+			slog.Debug(fmt.Sprintf("Author or phrase is empty: author=\"%s\" phrase=\"%s\"", line[0], line[1]))
 			continue
 		}
 
+		phraseHash := generateHash(line[1])
+
 		phrase := databasePhrase{
-			URL:     url,
-			URLHash: hash,
-			Author:  line[0],
-			Phrase:  line[1],
+			URL:         url,
+			ContentHash: hash,
+			Author:      line[0],
+			Phrase:      line[1],
+			PhraseHash:  phraseHash,
 		}
 		dp = append(dp, phrase)
 	}
-
-	// TODO: move out of here.
-	log.Println("Inserting in database...")
-	db.InsertPhrases(dp)
-
-	return []byte{}, nil
+	return dp, nil
 }
 
 func generateHash(data string) string {
