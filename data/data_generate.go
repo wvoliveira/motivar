@@ -90,7 +90,7 @@ package data
 var {{ .Language }} = []Phrase{
 {{- range .Phrases }}
 	{
-		Quote: "{{ .Quote }}",
+		Phrase: "{{ .Quote }}",
 		Author: "{{ .Author }}",
 	},
 {{- end }}
