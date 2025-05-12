@@ -25,16 +25,16 @@ const (
 var (
 	// Banner to show when run flags
 	Banner = fmt.Sprintf(`
-              ._ o o
-              \_´-)|_
-           ,""       \
-         ,"  ## |   ಠ ಠ. 
-       ," ##   ,-\__    ´.
-     ,"       /     ´--._;)
-   ,"     ## / Motivar %v
- ,"   ##    /
+             ._ o o
+             \_´-)|_
+          ,""       \
+        ,"  ## |   ಠ ಠ. 
+      ," ##   ,-\__    ´.
+    ,"       /     ´--._;)
+  ,"     ## / Motivar %v
+,"   ##    /
 
- `, version)
+`, version)
 )
 
 // Conf directory/file struct
@@ -89,10 +89,10 @@ func main() {
 	cmdMain.Usage = func() {
 		var cmd = flag.NewFlagSet(os.Args[0], flag.ExitOnError)
 		_, _ = fmt.Fprint(cmd.Output(), Banner)
-		_, _ = fmt.Fprintf(cmd.Output(), "Usage of %s:\n", Name)
+		_, _ = fmt.Fprintf(cmd.Output(), "Usage:\n")
 		cmdMain.PrintDefaults()
 
-		_, _ = fmt.Fprintf(cmd.Output(), "Usage of subcommand %s:\n", cmdAddPhrases.Name())
+		_, _ = fmt.Fprintf(cmd.Output(), "Subcommand %s:\n", cmdAddPhrases.Name())
 		cmdAddPhrases.PrintDefaults()
 	}
 	cmdAddPhrases.Usage = cmdMain.Usage
