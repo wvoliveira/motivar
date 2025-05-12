@@ -54,6 +54,11 @@ func fetchAndSave(db *database, kind, url, language string) (err error) {
 		r.Body = content
 		r.BodyHash = contentHash
 
+		logg.Info("Validating content format...")
+		if !r.IsCSV() {
+			return errors.New("invalid CSV format")
+		}
+
 		logg.Info("Trying to convert bytes to CSV format...")
 		csvLines, err := r.ConvertToCSV()
 		if err != nil {
@@ -98,7 +103,7 @@ func fetchAndSave(db *database, kind, url, language string) (err error) {
 		r.Body = content
 		r.BodyHash = contentHash
 
-		logg.Info("Trying to convert bytes to CSV format...")
+		logg.Info("Validating content format...")
 		if !r.IsJSON() {
 			return errors.New("invalid JSON format")
 		}
@@ -171,6 +176,12 @@ func fetch(url string) ([]byte, string, error) {
 	// - Check if phrase hash exists in the database.
 
 	return body, contentHash, nil
+}
+
+func (r req) IsCSV() bool {
+	reader := csv.NewReader(bytes.NewReader(r.Body))
+	_, err := reader.ReadAll()
+	return err == nil
 }
 
 func (r req) IsJSON() bool {
