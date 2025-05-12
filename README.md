@@ -11,20 +11,27 @@ $ motivar --help
 ```
 
 ```
-              ._ o o
-              \_´-)|_
-           ,""       \
-         ,"  ## |   ಠ ಠ.
-       ," ##   ,-\__    ´.
-     ,"       /     ´--._;)
-   ,"     ## / Motivar v0.1
- ,"   ##    /
+             ._ o o
+             \_´-)|_
+          ,""       \
+        ,"  ## |   ಠ ಠ.
+      ," ##   ,-\__    ´.
+    ,"       /     ´--._;)
+  ,"     ## / Motivar v0.1.0
+,"   ##    /
 
- Usage of motivar:
+Usage:
+  -debug
+        Enable debug mode
   -l string
         Choose a language to show quotes [br,us] (default "br")
+Subcommand add-phrases:
+  -fmt string
+        Specify format phrases content [csv,json] (default "csv")
   -language string
-        Choose a language to show quotes [br,us] (default "br")
+        The language of phrases [br,us]
+  -url string
+        Specify URL to download from
 ```
 
 Exemplo: 
@@ -64,12 +71,16 @@ $env:MOTIVAR_LANGUAGE = 'us'
 Life is fragile. We’re not guaranteed a tomorrow so give it everything you’ve got. Tim Cook
 ```
 
+Adicionando mais frases via URL
+
+```bash
+motivar add-phrases -fmt <json|csv> -language <br|us> -url <url do arquivo>
+```
+
 ## Funções
 
 - Frases em inglês e português
-- Configurável
 - Atualize a base de dados direto pelo CLI
-- Adicione endpoints para aumentar a base de frases
 - Modifique através de variáveis de ambiente ou arquivo de configuração
 
 ### Notes

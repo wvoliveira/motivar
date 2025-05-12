@@ -5,403 +5,403 @@ package data
 
 var PhrasesUS = []Phrase{
 	{
-		Quote: "Nothing is impossible, the word itself says “I’m possible”!",
+		Phrase: "Nothing is impossible, the word itself says “I’m possible”!",
 		Author: "Audrey Hepburn",
 	},
 	{
-		Quote: "I’ve learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.",
+		Phrase: "I’ve learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.",
 		Author: "Maya Angelou",
 	},
 	{
-		Quote: "Whether you think you can or you think you can’t, you’re right.",
+		Phrase: "Whether you think you can or you think you can’t, you’re right.",
 		Author: "Henry Ford",
 	},
 	{
-		Quote: "Perfection is not attainable, but if we chase perfection we can catch excellence.",
+		Phrase: "Perfection is not attainable, but if we chase perfection we can catch excellence.",
 		Author: "Vince Lombardi",
 	},
 	{
-		Quote: "Life is 10 percent what happens to me and 90 percent of how I react to it.",
+		Phrase: "Life is 10 percent what happens to me and 90 percent of how I react to it.",
 		Author: "Charles Swindoll",
 	},
 	{
-		Quote: "If you look at what you have in life, you’ll always have more. If you look at what you don’t have in life, you’ll never have enough.",
+		Phrase: "If you look at what you have in life, you’ll always have more. If you look at what you don’t have in life, you’ll never have enough.",
 		Author: "Oprah Winfrey",
 	},
 	{
-		Quote: "None of us is as smart as all of us.",
+		Phrase: "None of us is as smart as all of us.",
 		Author: "Ken Blanchard",
 	},
 	{
-		Quote: "I can’t change the direction of the wind, but I can adjust my sails to always reach my destination.",
+		Phrase: "I can’t change the direction of the wind, but I can adjust my sails to always reach my destination.",
 		Author: "Jimmy Dean",
 	},
 	{
-		Quote: "Believe you can and you’re halfway there.",
+		Phrase: "Believe you can and you’re halfway there.",
 		Author: "Theodore Roosevelt",
 	},
 	{
-		Quote: "To handle yourself, use your head; to handle others, use your heart.",
+		Phrase: "To handle yourself, use your head; to handle others, use your heart.",
 		Author: "Eleanor Roosevelt",
 	},
 	{
-		Quote: "Too many of us are not living our dreams because we are living our fears.",
+		Phrase: "Too many of us are not living our dreams because we are living our fears.",
 		Author: "Les Brown",
 	},
 	{
-		Quote: "Alone, we can do so little; together we can do so much.",
+		Phrase: "Alone, we can do so little; together we can do so much.",
 		Author: "Helen Keller",
 	},
 	{
-		Quote: "Whatever the mind of man can conceive and believe, it can achieve.",
+		Phrase: "Whatever the mind of man can conceive and believe, it can achieve.",
 		Author: "Napoleon Hill",
 	},
 	{
-		Quote: "Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do, so throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails. Explore, Dream, Discover.",
+		Phrase: "Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do, so throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails. Explore, Dream, Discover.",
 		Author: "Mark Twain",
 	},
 	{
-		Quote: "I’ve missed more than 9000 shots in my career. I’ve lost almost 300 games. 26 times I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life. And that is why I succeed.",
+		Phrase: "I’ve missed more than 9000 shots in my career. I’ve lost almost 300 games. 26 times I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life. And that is why I succeed.",
 		Author: "Michael Jordan",
 	},
 	{
-		Quote: "Strive not to be a success, but rather to be of value.",
+		Phrase: "Strive not to be a success, but rather to be of value.",
 		Author: "Albert Einstein",
 	},
 	{
-		Quote: "I am not a product of my circumstances. I am a product of my decisions.",
+		Phrase: "I am not a product of my circumstances. I am a product of my decisions.",
 		Author: "Stephen Covey",
 	},
 	{
-		Quote: "When everything seems to be going against you, remember that the airplane takes off against the wind, not with it.",
+		Phrase: "When everything seems to be going against you, remember that the airplane takes off against the wind, not with it.",
 		Author: "enry Ford",
 	},
 	{
-		Quote: "The most common way people give up their power is by thinking they don’t have any.",
+		Phrase: "The most common way people give up their power is by thinking they don’t have any.",
 		Author: "Alice Walker",
 	},
 	{
-		Quote: "The most difficult thing is the decision to act, the rest is merely tenacity.",
+		Phrase: "The most difficult thing is the decision to act, the rest is merely tenacity.",
 		Author: "Amelia Earhart",
 	},
 	{
-		Quote: "Teamwork is the ability to work together toward a common vision, the ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results.",
+		Phrase: "Teamwork is the ability to work together toward a common vision, the ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results.",
 		Author: "Andrew Carnegie",
 	},
 	{
-		Quote: "Don’t judge each day by the harvest you reap but by the seeds that you plant.",
+		Phrase: "Don’t judge each day by the harvest you reap but by the seeds that you plant.",
 		Author: "Robert Louis Stevenson",
 	},
 	{
-		Quote: "The real opportunity for success lies within the person and not in the job.",
+		Phrase: "The real opportunity for success lies within the person and not in the job.",
 		Author: "Zig Ziglar",
 	},
 	{
-		Quote: "Change your thoughts and you change your world.",
+		Phrase: "Change your thoughts and you change your world.",
 		Author: "Norman Vincent Peale",
 	},
 	{
-		Quote: "There is no royal road to anything. One thing at a time, all things in succession. That which grows fast, withers as rapidly. That which grows slowly, endures.",
+		Phrase: "There is no royal road to anything. One thing at a time, all things in succession. That which grows fast, withers as rapidly. That which grows slowly, endures.",
 		Author: "Josiah Gilbert Holland",
 	},
 	{
-		Quote: "Be not afraid of life. Believe that life is worth living, and your belief will help create the fact.",
+		Phrase: "Be not afraid of life. Believe that life is worth living, and your belief will help create the fact.",
 		Author: "William James",
 	},
 	{
-		Quote: "Build your own dreams, or someone else will hire you to build theirs.",
+		Phrase: "Build your own dreams, or someone else will hire you to build theirs.",
 		Author: "Farrah Gray",
 	},
 	{
-		Quote: "Remember that not getting what you want is sometimes a wonderful stroke of luck.",
+		Phrase: "Remember that not getting what you want is sometimes a wonderful stroke of luck.",
 		Author: "Dalai Lama",
 	},
 	{
-		Quote: "You can’t use up creativity. The more you use, the more you have.",
+		Phrase: "You can’t use up creativity. The more you use, the more you have.",
 		Author: "Maya Angelou",
 	},
 	{
-		Quote: "I have learned over the years that when one’s mind is made up, this diminishes fear.",
+		Phrase: "I have learned over the years that when one’s mind is made up, this diminishes fear.",
 		Author: "Rosa Parks",
 	},
 	{
-		Quote: "I would rather die of passion than of boredom.",
+		Phrase: "I would rather die of passion than of boredom.",
 		Author: "Vincent van Gogh",
 	},
 	{
-		Quote: "A truly rich man is one whose children run into his arms when his hands are empty.",
+		Phrase: "A truly rich man is one whose children run into his arms when his hands are empty.",
 		Author: "Unknown",
 	},
 	{
-		Quote: "A person who never made a mistake never tried anything new.",
+		Phrase: "A person who never made a mistake never tried anything new.",
 		Author: "Albert Einstein",
 	},
 	{
-		Quote: "What’s money? A man is a success if he gets up in the morning and goes to bed at night and in between does what he wants to do.",
+		Phrase: "What’s money? A man is a success if he gets up in the morning and goes to bed at night and in between does what he wants to do.",
 		Author: "Bob Dylan",
 	},
 	{
-		Quote: "I have been impressed with the urgency of doing. Knowing is not enough; we must apply. Being willing is not enough; we must do.",
+		Phrase: "I have been impressed with the urgency of doing. Knowing is not enough; we must apply. Being willing is not enough; we must do.",
 		Author: "Leonardo da Vinci",
 	},
 	{
-		Quote: "If you want to lift yourself up, lift up someone else.",
+		Phrase: "If you want to lift yourself up, lift up someone else.",
 		Author: "Booker T. Washington",
 	},
 	{
-		Quote: "When I stand before God at the end of my life, I would hope that I would not have a single bit of talent left and could say, I used everything you gave me.",
+		Phrase: "When I stand before God at the end of my life, I would hope that I would not have a single bit of talent left and could say, I used everything you gave me.",
 		Author: "Erma Bombeck",
 	},
 	{
-		Quote: "The quickest way to double your money is to fold it over and put it back in your pocket.",
+		Phrase: "The quickest way to double your money is to fold it over and put it back in your pocket.",
 		Author: "Will Rogers",
 	},
 	{
-		Quote: "Certain things catch your eye, but pursue only those that capture the heart.",
+		Phrase: "Certain things catch your eye, but pursue only those that capture the heart.",
 		Author: "Ancient Indian Proverb",
 	},
 	{
-		Quote: "When I hear somebody sigh, ‘Life is hard,’ I am always tempted to ask, ‘Compared to what?’”",
+		Phrase: "When I hear somebody sigh, ‘Life is hard,’ I am always tempted to ask, ‘Compared to what?’”",
 		Author: "Sydney Harris",
 	},
 	{
-		Quote: "Everything has beauty, but not everyone can see.",
+		Phrase: "Everything has beauty, but not everyone can see.",
 		Author: "Confucius",
 	},
 	{
-		Quote: "Nurture your mind with great thoughts. To believe in the heroic makes heroes.",
+		Phrase: "Nurture your mind with great thoughts. To believe in the heroic makes heroes.",
 		Author: "Benjamin Disraeli",
 	},
 	{
-		Quote: "When I was 5 years old, my mother always told me that happiness was the key to life. When I went to school, they asked me what I wanted to be when I grew up. I wrote down “happy”. They told me I didn’t understand the assignment, and I told them they didn’t understand life.",
+		Phrase: "When I was 5 years old, my mother always told me that happiness was the key to life. When I went to school, they asked me what I wanted to be when I grew up. I wrote down “happy”. They told me I didn’t understand the assignment, and I told them they didn’t understand life.",
 		Author: "John Lennon",
 	},
 	{
-		Quote: "The only person you are destined to become is the person you decide to be.",
+		Phrase: "The only person you are destined to become is the person you decide to be.",
 		Author: "Ralph Waldo Emerson",
 	},
 	{
-		Quote: "We can’t help everyone, but everyone can help someone.",
+		Phrase: "We can’t help everyone, but everyone can help someone.",
 		Author: "Ronald Reagan",
 	},
 	{
-		Quote: "Everything you’ve ever wanted is on the other side of fear.",
+		Phrase: "Everything you’ve ever wanted is on the other side of fear.",
 		Author: "George Addair",
 	},
 	{
-		Quote: "We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light.",
+		Phrase: "We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light.",
 		Author: "Plato",
 	},
 	{
-		Quote: "Nothing will work unless you do.",
+		Phrase: "Nothing will work unless you do.",
 		Author: "Maya Angelou",
 	},
 	{
-		Quote: "I alone cannot change the world, but I can cast a stone across the water to create many ripples.",
+		Phrase: "I alone cannot change the world, but I can cast a stone across the water to create many ripples.",
 		Author: "Mother Teresa",
 	},
 	{
-		Quote: "What we achieve inwardly will change outer reality.",
+		Phrase: "What we achieve inwardly will change outer reality.",
 		Author: "Plutarch",
 	},
 	{
-		Quote: "There are two ways of spreading light: to be the candle or the mirror that reflects it.",
+		Phrase: "There are two ways of spreading light: to be the candle or the mirror that reflects it.",
 		Author: "Edith Wharton",
 	},
 	{
-		Quote: "You do not find the happy life. You make it.",
+		Phrase: "You do not find the happy life. You make it.",
 		Author: "Camilla Eyring Kimball",
 	},
 	{
-		Quote: "The most wasted of days is one without laughter.",
+		Phrase: "The most wasted of days is one without laughter.",
 		Author: "E.E. Cummings",
 	},
 	{
-		Quote: "Stay close to anything that makes you glad you are alive.",
+		Phrase: "Stay close to anything that makes you glad you are alive.",
 		Author: "Hafez",
 	},
 	{
-		Quote: "Make each day your masterpiece.",
+		Phrase: "Make each day your masterpiece.",
 		Author: "John Wooden",
 	},
 	{
-		Quote: "Happiness often sneaks in through a door you didn’t know you left open.",
+		Phrase: "Happiness often sneaks in through a door you didn’t know you left open.",
 		Author: "John Barrymore",
 	},
 	{
-		Quote: "Happiness is not by chance, but by choice.",
+		Phrase: "Happiness is not by chance, but by choice.",
 		Author: "Jim Rohn",
 	},
 	{
-		Quote: "Life changes very quickly, in a very positive way, if you let it.",
+		Phrase: "Life changes very quickly, in a very positive way, if you let it.",
 		Author: "Lindsey Vonn",
 	},
 	{
-		Quote: "Keep your face to the sunshine and you cannot see a shadow.",
+		Phrase: "Keep your face to the sunshine and you cannot see a shadow.",
 		Author: "Helen Keller",
 	},
 	{
-		Quote: "Impossible is for the unwilling.",
+		Phrase: "Impossible is for the unwilling.",
 		Author: "John Keats",
 	},
 	{
-		Quote: "No pressure, no diamonds.",
+		Phrase: "No pressure, no diamonds.",
 		Author: "Thomas Carlyle",
 	},
 	{
-		Quote: "Believe you can and you’re halfway there.",
+		Phrase: "Believe you can and you’re halfway there.",
 		Author: "Theodore Roosevelt",
 	},
 	{
-		Quote: "Failure is the condiment that gives success its flavor.",
+		Phrase: "Failure is the condiment that gives success its flavor.",
 		Author: "Truman Capote",
 	},
 	{
-		Quote: "It is never too late to be what you might have been.",
+		Phrase: "It is never too late to be what you might have been.",
 		Author: "George Eliot",
 	},
 	{
-		Quote: "When you have a dream, you’ve got to grab it and never let go.",
+		Phrase: "When you have a dream, you’ve got to grab it and never let go.",
 		Author: "Carol Burnett",
 	},
 	{
-		Quote: "You must be the change you wish to see in the world.",
+		Phrase: "You must be the change you wish to see in the world.",
 		Author: "Mahatma Gandhi",
 	},
 	{
-		Quote: "Stay foolish to stay sane.",
+		Phrase: "Stay foolish to stay sane.",
 		Author: "Maxime Lagacé",
 	},
 	{
-		Quote: "Stay hungry. Stay foolish.",
+		Phrase: "Stay hungry. Stay foolish.",
 		Author: "Steve Jobs",
 	},
 	{
-		Quote: "Whatever you are, be a good one.",
+		Phrase: "Whatever you are, be a good one.",
 		Author: "Abraham Lincoln ",
 	},
 	{
-		Quote: "You must do the things you think you cannot do.",
+		Phrase: "You must do the things you think you cannot do.",
 		Author: "Eleanor Roosevelt",
 	},
 	{
-		Quote: "Wherever you go, go with all your heart.",
+		Phrase: "Wherever you go, go with all your heart.",
 		Author: "Confucius",
 	},
 	{
-		Quote: "Be faithful to that which exists within yourself.",
+		Phrase: "Be faithful to that which exists within yourself.",
 		Author: "André Gide",
 	},
 	{
-		Quote: "Dream big and dare to fail.",
+		Phrase: "Dream big and dare to fail.",
 		Author: "Norman Vaughan",
 	},
 	{
-		Quote: "My mission in life is not merely to survive, but to thrive.",
+		Phrase: "My mission in life is not merely to survive, but to thrive.",
 		Author: "Maya Angelou",
 	},
 	{
-		Quote: "You are enough just as you are.",
+		Phrase: "You are enough just as you are.",
 		Author: "Meghan Markle",
 	},
 	{
-		Quote: "To be the best, you must be able to handle the worst.",
+		Phrase: "To be the best, you must be able to handle the worst.",
 		Author: "Wilson Kanadi",
 	},
 	{
-		Quote: "No matter what you’re going through, there’s a light at the end of the tunnel.",
+		Phrase: "No matter what you’re going through, there’s a light at the end of the tunnel.",
 		Author: "Demi Lovato",
 	},
 	{
-		Quote: "Life is like riding a bicycle. To keep your balance, you must keep moving.",
+		Phrase: "Life is like riding a bicycle. To keep your balance, you must keep moving.",
 		Author: "Albert Einstein",
 	},
 	{
-		Quote: "Every moment is a fresh beginning.",
+		Phrase: "Every moment is a fresh beginning.",
 		Author: "T.S. Eliot ",
 	},
 	{
-		Quote: "No guts, no story.",
+		Phrase: "No guts, no story.",
 		Author: "Chris Brady",
 	},
 	{
-		Quote: "Keep going. Be all in.",
+		Phrase: "Keep going. Be all in.",
 		Author: "Bryan Hutchinson",
 	},
 	{
-		Quote: "Leave no stone unturned.",
+		Phrase: "Leave no stone unturned.",
 		Author: "Euripides",
 	},
 	{
-		Quote: "Nothing is impossible. The word itself says “I’m possible!”",
+		Phrase: "Nothing is impossible. The word itself says “I’m possible!”",
 		Author: "Audrey Hepburn",
 	},
 	{
-		Quote: "It isn’t where you came from. It’s where you’re going that counts.",
+		Phrase: "It isn’t where you came from. It’s where you’re going that counts.",
 		Author: "Ella Fitzgerald",
 	},
 	{
-		Quote: "If it matters to you, you’ll find a way.",
+		Phrase: "If it matters to you, you’ll find a way.",
 		Author: "Charlie Gilkey",
 	},
 	{
-		Quote: "Tough times never last, but tough people do.",
+		Phrase: "Tough times never last, but tough people do.",
 		Author: "Dr. Robert Schuller",
 	},
 	{
-		Quote: "Turn your wounds into wisdom.",
+		Phrase: "Turn your wounds into wisdom.",
 		Author: "Oprah Winfrey",
 	},
 	{
-		Quote: "The journey of a thousand miles begins with a single step.",
+		Phrase: "The journey of a thousand miles begins with a single step.",
 		Author: "Lao Tzu",
 	},
 	{
-		Quote: "If you’re going through hell, keep going.",
+		Phrase: "If you’re going through hell, keep going.",
 		Author: "Winston Churchill",
 	},
 	{
-		Quote: "Don’t wait, the time will never be just right.",
+		Phrase: "Don’t wait, the time will never be just right.",
 		Author: "Napoleon Hill",
 	},
 	{
-		Quote: "If I cannot do great things, I can do small things in a great way.",
+		Phrase: "If I cannot do great things, I can do small things in a great way.",
 		Author: "Martin Luther King Jr.",
 	},
 	{
-		Quote: "Life is fragile. We’re not guaranteed a tomorrow so give it everything you’ve got.",
+		Phrase: "Life is fragile. We’re not guaranteed a tomorrow so give it everything you’ve got.",
 		Author: "Tim Cook",
 	},
 	{
-		Quote: "The bad news is time flies. The good news is you’re the pilot.",
+		Phrase: "The bad news is time flies. The good news is you’re the pilot.",
 		Author: "Michael Altshuler",
 	},
 	{
-		Quote: "Try to be a rainbow in someone’s cloud.",
+		Phrase: "Try to be a rainbow in someone’s cloud.",
 		Author: "Maya Angelou",
 	},
 	{
-		Quote: "Some people look for a beautiful place. Others make a place beautiful.",
+		Phrase: "Some people look for a beautiful place. Others make a place beautiful.",
 		Author: "Hazrat Inayat Khan",
 	},
 	{
-		Quote: "Never let your sense of morals prevent you from doing what is right.",
+		Phrase: "Never let your sense of morals prevent you from doing what is right.",
 		Author: "Isaac Asimov",
 	},
 	{
-		Quote: "I’m starting to think this world is just a place for us to learn that we need each other more than we want to admit.",
+		Phrase: "I’m starting to think this world is just a place for us to learn that we need each other more than we want to admit.",
 		Author: "Richelle E. Goodrich",
 	},
 	{
-		Quote: "We have a responsibility to help those around us and help others in need.",
+		Phrase: "We have a responsibility to help those around us and help others in need.",
 		Author: "Virginia Williams",
 	},
 	{
-		Quote: "No one is useless in this world who lightens the burdens of others.",
+		Phrase: "No one is useless in this world who lightens the burdens of others.",
 		Author: "Charles Dickens",
 	},
 	{
-		Quote: "No one has ever become poor by giving.",
+		Phrase: "No one has ever become poor by giving.",
 		Author: "Anne Frank",
 	},
 }

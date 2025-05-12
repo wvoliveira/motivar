@@ -1,0 +1,1466 @@
+[
+  {
+    "phrase" : "Os problemas são oportunidades para se mostrar o que sabe.",
+    "author" : "Duke Ellington"
+  },
+  {
+    "phrase" : "Nossos fracassos, às vezes, são mais frutíferos do que os êxitos.",
+    "author" : "Henry Ford"
+  },
+  {
+    "phrase" : "Tente de novo. Fracasse de novo. Mas fracasse melhor",
+    "author" : "Samuel Beckett"
+  },
+  {
+    "phrase" : "É costume de um tolo, quando erra, queixar-se dos outros. É costume de um sábio queixar-se de si mesmo",
+    "author" : "Sócrates"
+  },
+  {
+    "phrase" : "O verdadeiro heroísmo consiste em persistir por mais um momento, quando tudo parece perdido",
+    "author" : "W. F. Grenfel"
+  },
+  {
+    "phrase" : "Cada cliente é como se fosse primeiro e único",
+    "author" : "Norman Bawes"
+  },
+  {
+    "phrase" : "Mesmo que já tenhas feito uma longa caminhada, há sempre um novo caminho a fazer",
+    "author" : "Santo Agostinho"
+  },
+  {
+    "phrase" : "Vender é construir uma ponte entre você e seu cliente e fazê-lo atravessar para o seu lado",
+    "author" : "Ciclo dos Profissionais de Venda"
+  },
+  {
+    "phrase" : "Na prosperidade, nossos amigos nos conhecem; na adversidade, nós é que conhecemos nossos amigos",
+    "author" : "Churton Collins"
+  },
+  {
+    "phrase" : "A felicidade não está em fazer o que a gente quer, e sim querer o que a gente faz",
+    "author" : "Jean Paul Sartre"
+  },
+  {
+    "phrase" : "Nada acontece a menos que sonhemos antes",
+    "author" : "Carl Sandburg"
+  },
+  {
+    "phrase" : "É sempre divertido fazer o impossível",
+    "author" : "Walt Disney"
+  },
+  {
+    "phrase" : "A coisa mais cara é transformar um cliente insatisfeito em satisfeito",
+    "author" : "Jan Carlzon"
+  },
+  {
+    "phrase" : "Experiência é o nome que cada um dá a seus erros",
+    "author" : "Oscar Wilde"
+  },
+  {
+    "phrase" : "Lembre sempre que a sua vontade de triunfar é mais importante do que qualquer outra coisa",
+    "author" : "Abraham Lincoln"
+  },
+  {
+    "phrase" : "Prefiro os erros do entusiasmo à indiferença da sabedoria",
+    "author" : "Anatole France"
+  },
+  {
+    "phrase" : "Na realidade, vendas e serviços são inseparáveis",
+    "author" : "Carter Brow"
+  },
+  {
+    "phrase" : "A arte de ser ora audacioso, ora prudente, é a arte de vencer",
+    "author" : "Napoleão Bonaparte"
+  },
+  {
+    "phrase" : "Seja corajoso. Mesmo que você não seja, finja ser. Ninguém nota a diferença",
+    "author" : "H. Jackson Brown Jr."
+  },
+  {
+    "phrase" : "Não somos responsáveis apenas pelo que fazemos, mas também pelo que deixamos de fazer",
+    "author" : "Moliere"
+  },
+  {
+    "phrase" : "A estratégia de marketing começa, termina, vive e morre com o cliente",
+    "author" : "Michael Gerber"
+  },
+  {
+    "phrase" : "Quando você contrata pessoas mais inteligentes do que você, prova que é mais inteligente do que elas",
+    "author" : "R. H. Grant"
+  },
+  {
+    "phrase" : "O talento vence jogos, mas só o trabalho em equipe vence campeonatos",
+    "author" : "Michael Jordan"
+  },
+  {
+    "phrase" : "Um negócio nunca é bom se com ele conseguimos um inimigo",
+    "author" : "Hugh Prather"
+  },
+  {
+    "phrase" : "Um objetivo nada mais é do que um sonho com limite de tempo",
+    "author" : "Joel L. Griffith"
+  },
+  {
+    "phrase" : "Sorte é o que acontece quando a preparação encontra a oportunidade",
+    "author" : "Elmer Letterman"
+  },
+  {
+    "phrase" : "O mercado dita inovações. Quem não segue vira peça de museu",
+    "author" : "Phill Knight"
+  },
+  {
+    "phrase" : "O único lugar que o sucesso vem antes do trabalho é no dicionário",
+    "author" : "Vidal Sasson"
+  },
+  {
+    "phrase" : "Se você quiser ir daqui para lá no mundo dos negócios, não encontrará nenhuma linha reta para levá-lo",
+    "author" : "William Ahmanson"
+  },
+  {
+    "phrase" : "Integridade é a essência de todo negócio",
+    "author" : "R. Buckminster Fuller"
+  },
+  {
+    "phrase" : "Existe o risco que você jamais pode correr. Existe o risco que você jamais pode deixar de correr",
+    "author" : "Peter Drucker"
+  },
+  {
+    "phrase" : "As duas coisas mais importantes não aparecem no balanço da empresa: sua reputação e o seu time",
+    "author" : "Henry Ford"
+  },
+  {
+    "phrase" : "A qualidade do seu trabalho tem tudo a ver com a qualidade da sua vida",
+    "author" : "Orison Swett Marden"
+  },
+  {
+    "phrase" : "Nenhuma empresa pode ter sucesso tentando tudo para todos",
+    "author" : "Michael Treacy"
+  },
+  {
+    "phrase" : "Nunca se esqueça de um cliente; e nunca deixe que um cliente esqueça você",
+    "author" : "Walter Reuther"
+  },
+  {
+    "phrase" : "Somos o que repetidamente fazemos. Portanto, a excelência não é um feito, é um hábito",
+    "author" : "Aristóteles"
+  },
+  {
+    "phrase" : "Persistência é irmã gêmea da excelência. Uma é mãe da qualidade, a outra a mãe do tempo",
+    "author" : "Marabel Morgan"
+  },
+  {
+    "phrase" : "O propósito de uma companhia é criar e manter o cliente",
+    "author" : "Theodoro Levitt"
+  },
+  {
+    "phrase" : "Comemore os seus sucessos. Veja com humor os seus fracassos",
+    "author" : "Sam Walton"
+  },
+  {
+    "phrase" : "Autorrespeito, autoconhecimento e autocontrole conduzem a vida ao poder supremo",
+    "author" : "Alfred Tennyson"
+  },
+  {
+    "phrase" : "É tentando o impossível que se chega à realização do possível",
+    "author" : "Henri Barbusse"
+  },
+  {
+    "phrase" : "Ganharão o jogo empresas que têm como missão exceder as expectativas dos clientes",
+    "author" : "Richard Whiteley"
+  },
+  {
+    "phrase" : "Toda empresa precisa ter gente que erra, que não tem medo de errar e que aprende com erro",
+    "author" : "Bill Gates"
+  },
+  {
+    "phrase" : "A confiança em si mesmo é o primeiro segredo do sucesso",
+    "author" : "Ralph Waldo Emerson"
+  },
+  {
+    "phrase" : "Aquele que pretende ser um líder tem que ser uma ponte",
+    "author" : "Provérbio Gal"
+  },
+  {
+    "phrase" : "Sempre que se vê um empreendimento de sucesso é porque alguém antes tomou uma decisão destemida",
+    "author" : "Peter Ducker"
+  },
+  {
+    "phrase" : "Serviços aos clientes é uma estratégia de marketing",
+    "author" : "John Tschohl"
+  },
+  {
+    "phrase" : "Muda tuas ideias e mudarás teu mundo",
+    "author" : "Norman Vincent Peale"
+  },
+  {
+    "phrase" : "Sua tarefa como líder é criar uma atmosfera que transforme o antagonismo em energia criativa",
+    "author" : "John Kao"
+  },
+  {
+    "phrase" : "A publicidade traz os clientes até a porta; mas o mau serviço envia eles direto para fora",
+    "author" : "John Tschohl"
+  },
+  {
+    "phrase" : "Único cliente bom é o cliente feliz. Lembre-se: clientes felizes adoram gastar dinheiro",
+    "author" : "Daryl Bernstein"
+  },
+  {
+    "phrase" : "Devemos prometer somente aquilo que podemos entregar e entregar mais do que prometemos",
+    "author" : "Jean Rozwadowski"
+  },
+  {
+    "phrase" : "Nada de importante no mundo foi realizado sem paixão",
+    "author" : "Georg Wilhelm"
+  },
+  {
+    "phrase" : "Quem tem a obrigação de visualizar o futuro não é o cliente",
+    "author" : "Célia Chaim"
+  },
+  {
+    "phrase" : "Profissional nota 10 é aquele que tem 2 pontos de esforço, 3 pontos de talento e 5 pontos de caráter",
+    "author" : "Roland Barthes"
+  },
+  {
+    "phrase" : "Uma das melhores maneiras de convencer os outros é ouvindo. Ouça todos",
+    "author" : "Dean Rusk"
+  },
+  {
+    "phrase" : "O importante é mudar sempre, mesmo que estejamos crescendo e ganhando o jogo",
+    "author" : "Masaaki Imai"
+  },
+  {
+    "phrase" : "Sempre que você vai encontrar um cliente você é a empresa",
+    "author" : "Barrie Hopson e Mike Scally"
+  },
+  {
+    "phrase" : "Se não puder destacar-se pelo talento, vença pelo esforço",
+    "author" : "Dave Weinbaum"
+  },
+  {
+    "phrase" : "Em busca do ótimo não se faz o bom",
+    "author" : "Segundo Mandamento da TAM"
+  },
+  {
+    "phrase" : "Se existe uma forma de fazer melhor, descubra-a",
+    "author" : "Thomas Edison"
+  },
+  {
+    "phrase" : "Fechar os olhos e os ouvidos para o cliente é uma loucura. É um suicídio empresarial",
+    "author" : "Sérgio Almeida"
+  },
+  {
+    "phrase" : "Não deixe o ruído das opiniões dos outros abafar a sua própria voz interior",
+    "author" : "Steve Jobs"
+  },
+  {
+    "phrase" : "Somente os que ousam errar muito podem realizar muito",
+    "author" : "John F. Kennedy"
+  },
+  {
+    "phrase" : "Aceite os desafios para que possa sentir o sabor da vitória",
+    "author" : "General George S. Patton"
+  },
+  {
+    "phrase" : "A sorte favorece a mente preparada",
+    "author" : "Louis Pasteur"
+  },
+  {
+    "phrase" : "Quando os momentos da verdade não são gerenciados, o serviço regride até a mediocridade",
+    "author" : "Karl Albrecht"
+  },
+  {
+    "phrase" : "Metas são necessárias não só para nos motivar, mas para nos manter vivos",
+    "author" : "Robert H. Schuller"
+  },
+  {
+    "phrase" : "Pessoas com meta têm sucesso pois sabem onde estão indo",
+    "author" : "Earl Nightingate"
+  },
+  {
+    "phrase" : "A pessoa comum é exigente com os outros. A superior é exigente consigo mesmo",
+    "author" : "Marco Aurélio"
+  },
+  {
+    "phrase" : "Não há sucesso sem dificuldade",
+    "author" : "Sófocles"
+  },
+  {
+    "phrase" : "Os clientes julgam os serviços pela maneira que são tratados por aqueles com quem tem contato",
+    "author" : "Carl Sewell"
+  },
+  {
+    "phrase" : "Um grande prazer na vida é fazer aquilo que dizem que você não é capaz de fazer",
+    "author" : "Walter Gagehot"
+  },
+  {
+    "phrase" : "Toda glória advém de ousar começar",
+    "author" : "Eugene F. Ware"
+  },
+  {
+    "phrase" : "Todas as pequenas coisas, juntas, formam uma base de clientes fiéis e mais lucrativas",
+    "author" : "Bruce Hammonds"
+  },
+  {
+    "phrase" : "A pessoa que não acredita em si mesmo não acredita em mais nada",
+    "author" : "Roy L. Smith"
+  },
+  {
+    "phrase" : "Grandes mentes estão prontas não apenas para explorar oportunidades, mas para criá-las",
+    "author" : "Cotton"
+  },
+  {
+    "phrase" : "O primeiro passo indispensável para conseguir coisas na vida é decidir o que você quer",
+    "author" : "Ben Stein"
+  },
+  {
+    "phrase" : "A percepção quando chega a ser julgada por outros é a realidade",
+    "author" : "Jack Lowenstein"
+  },
+  {
+    "phrase" : "O pior fracassado do mundo é aquele que perdeu o entusiasmo",
+    "author" : "H. W. Arnold"
+  },
+  {
+    "phrase" : "A maior recompensa pelo trabalho não é o que a pessoa ganha, é o que ela se torna através dele",
+    "author" : "John Ruskin"
+  },
+  {
+    "phrase" : "Quando as expectativas aumentam inicia-se um ciclo interminável e contínuo de melhoria",
+    "author" : "Steven Hronec"
+  },
+  {
+    "phrase" : "Aquele que cometeu um erro e não corrigiu está cometendo outro erro",
+    "author" : "Confúcio"
+  },
+  {
+    "phrase" : "A vitória sempre foi de quem nunca duvidou dela",
+    "author" : "Raul Follerean"
+  },
+  {
+    "phrase" : "Os satisfeitos nada mais fazem. Os insatisfeitos são os únicos propulsores do mundo",
+    "author" : "Walter Savage Landor"
+  },
+  {
+    "phrase" : "Todas as coisas são possíveis àqueles que creem",
+    "author" : "S. Marcos"
+  },
+  {
+    "phrase" : "O problema é que a maioria das pessoas prefere um elogio que prejudique do que uma crítica que beneficie",
+    "author" : "Norman Vincent Peale"
+  },
+  {
+    "phrase" : "A decepção surge da disparidade entre a expectativa de uma experiência agradável e a experiência real",
+    "author" : "Albert Hirschman"
+  },
+  {
+    "phrase" : "Prefiro a angústia da busca do que a paz da acomodação",
+    "author" : "Dom Resende Costa"
+  },
+  {
+    "phrase" : "Os únicos limites das pessoas são o tamanho de suas ideias e o grau de sua dedicação",
+    "author" : "F. Veiga"
+  },
+  {
+    "phrase" : "Conhecimento não é aquilo que você sabe, mas o que você faz com aquilo que sabe",
+    "author" : "Aldous Huxley"
+  },
+  {
+    "phrase" : "Fidelidade do cliente é a chave para lucratividade e crescimento futuro",
+    "author" : "Rick Tate"
+  },
+  {
+    "phrase" : "Critica o que fazes, e não faças o que criticas",
+    "author" : "Provérbio "
+  },
+  {
+    "phrase" : "O que merece ser feito, merece ser bem feito",
+    "author" : "Lord Chesterfield"
+  },
+  {
+    "phrase" : "Não encontre defeitos, encontre soluções. Qualquer um sabe queixar-se",
+    "author" : "Henry Ford"
+  },
+  {
+    "phrase" : "Para evitar críticas: não faça nada, não diga nada, não seja nada",
+    "author" : "Elbert Hubbard"
+  },
+  {
+    "phrase" : "As pessoas abominam a impessoalidade do negócio",
+    "author" : "Marcos Gouv"
+  },
+  {
+    "phrase" : "Nunca aceite o ‘não’ como resposta",
+    "author" : "J. F. Mitchell"
+  },
+  {
+    "phrase" : "A natureza nos deu uma língua e dois ouvidos para que ouçamos mais do que falamos",
+    "author" : "Diógenes Laércio"
+  },
+  {
+    "phrase" : "Se você não puder manter, não proponha nada; esta é a regra básica na satisfação do cliente",
+    "author" : "Sérgio Almeida"
+  },
+  {
+    "phrase" : "Feliz aquele que sabe adquirir experiência com o erro dos outros",
+    "author" : "Kauto"
+  },
+  {
+    "phrase" : "Querer ser de seu tempo é já estar ultrapassado",
+    "author" : "Eugène Ionesco"
+  },
+  {
+    "phrase" : "Planeje o seu trabalho hoje para todos os dias trabalhar o seu plano",
+    "author" : "Norman Vincent Peale"
+  },
+  {
+    "phrase" : "Supere a expectativa do cliente com pequenas ações frequentes e não solicitadas",
+    "author" : "David Freemantle"
+  },
+  {
+    "phrase" : "Sucesso é apenas sorte; pergunte para qualquer fracassado",
+    "author" : "Earle Wilson"
+  },
+  {
+    "phrase" : "Destino não é exterior a nós; somos nós que criamos nosso próprio destino dia após dia",
+    "author" : "Henry Miller"
+  },
+  {
+    "phrase" : "O homem que removeu a montanha começou carregando as pedras",
+    "author" : "Provérbio chin"
+  },
+  {
+    "phrase" : "O gosto amargo da baixa qualidade dura bem mais do que a doçura do preço inferior",
+    "author" : "Heinz Rahnan"
+  },
+  {
+    "phrase" : "A covardia é o medo aceito; a coragem é o medo dominado",
+    "author" : "Lecouve"
+  },
+  {
+    "phrase" : "Todos os dias me levanto para vencer",
+    "author" : "Onassis"
+  },
+  {
+    "phrase" : "Meu sucesso se deve ao fato de me cercar de pessoas competentes",
+    "author" : "Enzo Ferrari"
+  },
+  {
+    "phrase" : "Não atrase o seu progresso com medo de fracassar",
+    "author" : "Nathiel Hover"
+  },
+  {
+    "phrase" : "As pessoas são a força direcional por trás do crescimento",
+    "author" : "Business Week"
+  },
+  {
+    "phrase" : "Quem não tem inteligência para criar tem que ter coragem para copiar",
+    "author" : "Sétimo Mandamento da TAM"
+  },
+  {
+    "phrase" : "Ninguém pode ferir você sem o seu consentimento",
+    "author" : "Eleanor Roosvelt"
+  },
+  {
+    "phrase" : "O verdadeiro risco é não fazer nada",
+    "author" : "Denis Waitley"
+  },
+  {
+    "phrase" : "Aquele que domina os outros é forte; aquele que domina a si mesmo é todo-poderoso",
+    "author" : "Lao Tsu"
+  },
+  {
+    "phrase" : "Faça o que puder, com o que tiver, onde estiver",
+    "author" : "Theodore Roosvelt"
+  },
+  {
+    "phrase" : "A qualidade do serviço e produto é decorrência da qualidade das pessoas",
+    "author" : "Claus Moller"
+  },
+  {
+    "phrase" : "Nossas dúvidas são traidoras e nos fazem perder, por medo de tentar, o que poderíamos ganhar",
+    "author" : "William Shakespeare"
+  },
+  {
+    "phrase" : "Os problemas são apenas oportunidades com roupas de trabalho",
+    "author" : "Henry John Kaiser"
+  },
+  {
+    "phrase" : "Não nos transformamos de uma hora para outra aquilo que não cooperamos para nos tornar",
+    "author" : "William J. Bennett"
+  },
+  {
+    "phrase" : "O que a pessoa pensa a respeito de si mesmo indica o seu destino",
+    "author" : "Henry David Thoreau"
+  },
+  {
+    "phrase" : "Decidir o que não fazer é tão importante quanto decidir o que fazer. Isso é verdadeiro para companhias e também para produtos",
+    "author" : "Steve Jobs"
+  },
+  {
+    "phrase" : "O cliente precisa saber que nós nos importamos com ele",
+    "author" : "Roberto Maksoud"
+  },
+  {
+    "phrase" : "Devemos ser a mudança que queremos ver no mundo",
+    "author" : "Gandhi"
+  },
+  {
+    "phrase" : "Você tem que fazer as coisas que pensa não ser capaz de fazer",
+    "author" : "Eleanor Roosvelt"
+  },
+  {
+    "phrase" : "Em toda a iniciativa, considere aonde você poderia chegar",
+    "author" : "Publilius Syrus"
+  },
+  {
+    "phrase" : "Ninguém pode construir uma reputação com base naquilo que ainda vai fazer",
+    "author" : "Henry Ford"
+  },
+  {
+    "phrase" : "A comunicação é a principal fonte de poder pessoal",
+    "author" : "Fortune Magazine"
+  },
+  {
+    "phrase" : "Falhar no planejamento é um planejamento para falhar",
+    "author" : "Effie Jones"
+  },
+  {
+    "phrase" : "Em todas as situações, deve-se considerar o objetivo",
+    "author" : "Jean de La Fontaine"
+  },
+  {
+    "phrase" : "65% dos negócios de uma empresa vêm de clientes já existentes – não de novos",
+    "author" : "AMA"
+  },
+  {
+    "phrase" : "É o motivo que engrandece a ação; é o fazer, não o feito",
+    "author" : "Margaret Preston"
+  },
+  {
+    "phrase" : "Quem vive sem disciplina morre sem honra",
+    "author" : "Provérbio island"
+  },
+  {
+    "phrase" : "Mesmo se você estiver no caminho certo será atropelado se ficar sentado nele",
+    "author" : "Will Rogers"
+  },
+  {
+    "phrase" : "Desperdiçar o próprio tempo é uma espécie de suicídio",
+    "author" : "George Savile"
+  },
+  {
+    "phrase" : "A ética dá lucro para a empresa",
+    "author" : "Lori Tansey"
+  },
+  {
+    "phrase" : "O fanatismo consiste em redobrar esforços quando o objetivo for esquecido",
+    "author" : "George Santayana"
+  },
+  {
+    "phrase" : "Se você não sabe para onde vai, provavelmente terminará em algum outro lugar",
+    "author" : "Laurence J. Peter"
+  },
+  {
+    "phrase" : "Os atrasos deixam o cliente com os dentes rangendo",
+    "author" : "Fred Wiersema"
+  },
+  {
+    "phrase" : "Uma jornada de mil quilômetros começa pelo primeiro passo",
+    "author" : "Lao Tsu"
+  },
+  {
+    "phrase" : "Algumas derrotas são mais triunfantes do que vitórias",
+    "author" : "Michael de Montaigne"
+  },
+  {
+    "phrase" : "Nossa vida é o que os nossos pensamentos fazem dela",
+    "author" : "Marco Aurélio Antonino"
+  },
+  {
+    "phrase" : "Quem torna as coisas mais fáceis para os outros, torna as coisas mais fáceis para si",
+    "author" : "Ditado asiático"
+  },
+  {
+    "phrase" : "Custa 6 vezes mais conquistar um novo cliente do que manter um antigo",
+    "author" : "Claus Moller"
+  },
+  {
+    "phrase" : "Seja um parâmetro de qualidade. Algumas pessoas não estão acostumadas a um ambiente onde a excelência é esperada",
+    "author" : "Steve Jobs"
+  },
+  {
+    "phrase" : "Coragem é estar morto de medo e encilhar o cavalo mesmo assim",
+    "author" : "John Wayne"
+  },
+  {
+    "phrase" : "O talento sempre tem consciência de sua própria abundância e não cria objeções em dividir",
+    "author" : "Alexander Soljenitsyn"
+  },
+  {
+    "phrase" : "Não se pode progredir enquanto se ajustam contas",
+    "author" : "Dick Armey"
+  },
+  {
+    "phrase" : "O único bem coletivo é aquele que assegura o bem individual de cada cidadão",
+    "author" : "Charles Dickens"
+  },
+  {
+    "phrase" : "Ouça, ou sua língua vai conservar sua surdez",
+    "author" : "Provérbio ind"
+  },
+  {
+    "phrase" : "O que você dá é o que você recebe",
+    "author" : "Eric Berne"
+  },
+  {
+    "phrase" : "Sucesso é a soma de pequenos esforços repetidos dia sim, e no outro também",
+    "author" : "Robert Collier"
+  },
+  {
+    "phrase" : "É bom ter objetivo para a jornada à frente; mas, no fim, a jornada é o que importa",
+    "author" : "Ursula L. Le Guin"
+  },
+  {
+    "phrase" : "Jamais imponha a sua linguagem às pessoas com as quais você deseja se comunicar",
+    "author" : "Abbie Hoffman"
+  },
+  {
+    "phrase" : "Você tem que escutar os clientes e então agir com base no que eles disseram",
+    "author" : "Charles Lazarus"
+  },
+  {
+    "phrase" : "As pessoas só vêem aquilo que estão preparadas para ver",
+    "author" : "Ralph Waldo Emerson"
+  },
+  {
+    "phrase" : "Quem só conhece o seu lado do problema sabe pouco sobre ele",
+    "author" : "John Stuart Mill"
+  },
+  {
+    "phrase" : "Duas cabeças são melhores do que uma",
+    "author" : "John Heywood"
+  },
+  {
+    "phrase" : "Uma ideia pode virar pó ou mágica, depende do talento que esbarra nela",
+    "author" : "William Bernbach"
+  },
+  {
+    "phrase" : "A empresa que busca encantar o cliente é inquieta e criativa",
+    "author" : "Sérgio Almeida"
+  },
+  {
+    "phrase" : "A oposição traz concórdia. A discórdia vem da mais perfeita harmonia",
+    "author" : "Heráclito"
+  },
+  {
+    "phrase" : "Não busque todas as qualidades em uma pessoa só",
+    "author" : "Confúcio"
+  },
+  {
+    "phrase" : "Ter senso de humor é tão importante quanto ter talento",
+    "author" : "Gary Oldman"
+  },
+  {
+    "phrase" : "Todos nós somos ignorantes, só que em assuntos diferentes",
+    "author" : "Will Rogers"
+  },
+  {
+    "phrase" : "O plano de só uma pessoa pode ser incompleto; o de duas será melhor",
+    "author" : "Chuang-tsé, adaptado"
+  },
+  {
+    "phrase" : "Ninguém jamais ganha uma discussão com o cliente",
+    "author" : "Barrie Hopson"
+  },
+  {
+    "phrase" : "O hoje é aluno do ontem",
+    "author" : "Thomas Fuller"
+  },
+  {
+    "phrase" : "Jamais devemos negociar por medo, mas jamais devemos ter medo de negociar",
+    "author" : "John F. Kennedy"
+  },
+  {
+    "phrase" : "O tratamento deve sempre ser positivo, independente da circunstância",
+    "author" : "Fábio Eltz"
+  },
+  {
+    "phrase" : "Não tenha medo de tempestades, pois estarás aprendendo a manejar o barco",
+    "author" : "Louisa May Alcott"
+  },
+  {
+    "phrase" : "Se você pensa que educação é uma coisa cara, tente a ignorância",
+    "author" : "Derek Bok"
+  },
+  {
+    "phrase" : "A coisa mais difícil é a decisão de agir, o resto é apenas tenacidade",
+    "author" : "Amelia Earhart"
+  },
+  {
+    "phrase" : "O autodesenvolvimento é um dever maior do que o auto-sacrifício",
+    "author" : "Elizabeth Cady Stanton"
+  },
+  {
+    "phrase" : "Grandes descobertas e progressos envolvem a cooperação de várias mentes",
+    "author" : "Alexander Graham Bell"
+  },
+  {
+    "phrase" : "É preciso buscar fatias na multidão",
+    "author" : "Sérgio Quartiermeister"
+  },
+  {
+    "phrase" : "Caia 7 vezes. Levante-se 8",
+    "author" : "Provérbio japon"
+  },
+  {
+    "phrase" : "Ninguém nasce um gênio; a pessoa se torna um",
+    "author" : "Simone de Beauvoir"
+  },
+  {
+    "phrase" : "Quando eu deixar de ser o que sou, eu irei me tornar o que poderia ser",
+    "author" : "Lao Tzu"
+  },
+  {
+    "phrase" : "Seu tempo é limitado, então não o gaste vivendo a vida de outra pessoa",
+    "author" : "Steve Jobs"
+  },
+  {
+    "phrase" : "A mente humana, expandida por uma ideia nova, jamais retorna à dimensão original",
+    "author" : "Oliver Wendell Holmes"
+  },
+  {
+    "phrase" : "A percepção é um ponto de vista individual. Portanto, não se discute",
+    "author" : "Sérgio Almeida"
+  },
+  {
+    "phrase" : "Você deve guardar um dragão dentro de si. Quando precisar, você deixa o dragão sair",
+    "author" : "Anderson Silva"
+  },
+  {
+    "phrase" : "Eu preferiria morrer de paixão do que de tédio",
+    "author" : "Vincent Van Gogh"
+  },
+  {
+    "phrase" : "Sonhar, afinal, é uma forma de planejamento",
+    "author" : "Gloria Steinem"
+  },
+  {
+    "phrase" : "O segredo do sucesso é a constância do objetivo",
+    "author" : "Benjamin Disraeli"
+  },
+  {
+    "phrase" : "Escreva algo que valha a pena ler, ou faça alguma coisa que valha a pena escrever",
+    "author" : "Benjamin Franklin"
+  },
+  {
+    "phrase" : "Saber ouvir e ter equilíbrio emocional: fundamentais no atendimento ao cliente",
+    "author" : "Fela Moscovici"
+  },
+  {
+    "phrase" : "É preciso ter dúvidas. Só os estúpidos têm uma confiança absoluta em si mesmos",
+    "author" : "Orson Welles"
+  },
+  {
+    "phrase" : "Devemos crer que somos dotados de alguma coisa, e que essa coisa, deve ser atingida a todo custo",
+    "author" : "Marie Curie"
+  },
+  {
+    "phrase" : "Tudo tem beleza. Mas nem todos podem ver",
+    "author" : "Confúcio"
+  },
+  {
+    "phrase" : "Prometa o que não irá cumprir e seus clientes formarão um mau conceito a seu respeito",
+    "author" : "Robert Peterson"
+  },
+  {
+    "phrase" : "Se o índice de falha é de 1 em 1 milhão, o que você responde para esse cliente?",
+    "author" : "Pôster da IBM"
+  },
+  {
+    "phrase" : "Se você deseja que seus filhos acabem bem, gaste o dobro de tempo com eles, e metade do dinheiro",
+    "author" : "Abigail Van Buren"
+  },
+  {
+    "phrase" : "Use bom senso em todas as situações; não espere por regras novas, pois não virão",
+    "author" : "Manual da Nordstrom"
+  },
+  {
+    "phrase" : "Todo mundo tem talento, é só uma questão de se mexer até descobrir qual",
+    "author" : "George Lucas"
+  },
+  {
+    "phrase" : "Quanto mais nos defrontamos com tecnologia, maior nosso anseio por contatos humanos",
+    "author" : "John Nasbit"
+  },
+  {
+    "phrase" : "Bem começado é meio caminho andado",
+    "author" : "Provérbio grego"
+  },
+  {
+    "phrase" : "A mente é tudo. Você se torna aquilo que você pensa",
+    "author" : "Buddha"
+  },
+  {
+    "phrase" : "Uma queixa é alguém avisando que você não o satisfez. E isso é escrito em ouro",
+    "author" : "Donald Beaver Jr."
+  },
+  {
+    "phrase" : "O medo de ousar, ser agressivo ou inovar fechou mais empresas do que a ousadia",
+    "author" : "Júlio Ribeiro"
+  },
+  {
+    "phrase" : "Minha primeira mensagem é: escute, escute e escute o pessoal que faz o trabalho",
+    "author" : "H. Ross Perot"
+  },
+  {
+    "phrase" : "A preguiça caminha tão devagar que a pobreza a alcança com rapidez",
+    "author" : "Franklin D. Roosvelt"
+  },
+  {
+    "phrase" : "Dos clientes insatisfeitos, apenas 5% efetivamente fez uma reclamação",
+    "author" : "Denis Walker"
+  },
+  {
+    "phrase" : "Vá na direção de seus sonhos. Viva a vida que você imaginou",
+    "author" : "Henry David Thoreau"
+  },
+  {
+    "phrase" : "Não existe empresa nota 10 com empregados nota 5",
+    "author" : "Marcos Gouv"
+  },
+  {
+    "phrase" : "Perder tempo é um castigo insuportável",
+    "author" : "Quin Guanshu"
+  },
+  {
+    "phrase" : "Serviços ao cliente não consistem em satisfação, mas sim em deslumbre",
+    "author" : "Chip Bell"
+  },
+  {
+    "phrase" : "Você pode destruir o seu hoje se preocupando com o amanhã",
+    "author" : "Janis Joplin"
+  },
+  {
+    "phrase" : "Todo cliente quer ser tratado como especial, não quer ser ‘mais um'",
+    "author" : "Fábio Eltz"
+  },
+  {
+    "phrase" : "Começar é a parte mais importante de qualquer trabalho",
+    "author" : "Platão"
+  },
+  {
+    "phrase" : "Nossa meta é resolver problemas antes que os clientes saibam que eles existam",
+    "author" : "Ron Bern"
+  },
+  {
+    "phrase" : "Uma boa cabeça e um bom coração formam sempre uma combinação formidável",
+    "author" : "Nelson Mandela"
+  },
+  {
+    "phrase" : "Se você não tem item de controle, você não tem gerência",
+    "author" : "Kaoru Ishikawa"
+  },
+  {
+    "phrase" : "Os colaboradores evitam as queixas pois eles nunca foram instruídos a lidar com elas",
+    "author" : "John Tschohl"
+  },
+  {
+    "phrase" : "O maior prêmio que a vida oferece é trabalhar em algo que valha a pena",
+    "author" : "Theodore Roosvelt"
+  },
+  {
+    "phrase" : "Um bom porta-voz transforma leite desnatado em chantilly",
+    "author" : "George Lichtenberg"
+  },
+  {
+    "phrase" : "Um líder genuíno é motivador: orienta as pessoas, não as dirige; envolve, não as coage",
+    "author" : "J. Walters"
+  },
+  {
+    "phrase" : "A vida não é sobre ter, é sobre dar e ser",
+    "author" : "Kevin Kruse"
+  },
+  {
+    "phrase" : "O resultado final de um serviço é um sentimento",
+    "author" : "Karl Albrecht"
+  },
+  {
+    "phrase" : "O objetivo do marketing de relacionamento é a retenção de clientes",
+    "author" : "Terry Vavra"
+  },
+  {
+    "phrase" : "Aqueles que nada fazem estão sempre dispostos a criticar os que fazem algo",
+    "author" : "Paul Deschanel"
+  },
+  {
+    "phrase" : "Cliente é todo aquele impactado por seus produtos, processos e serviços",
+    "author" : "Juran"
+  },
+  {
+    "phrase" : "As empresas terão de adaptar-se às preferências individuais de cada consumidor ou sucumbirão",
+    "author" : "Raimar Richers"
+  },
+  {
+    "phrase" : "Sente-se sufocado aquele sem um objetivo de vida",
+    "author" : "Fiódor Dostoiévski"
+  },
+  {
+    "phrase" : "Não critique a pessoa, somente o comportamento",
+    "author" : "Claus Moller"
+  },
+  {
+    "phrase" : "É doce deixar a mente relaxar de vez em quando",
+    "author" : "Horácio"
+  },
+  {
+    "phrase" : "O presente é o único momento que temos para fazer algo",
+    "author" : "Ken O"
+  },
+  {
+    "phrase" : "Todo mundo é capaz de dominar uma dor, exceto quem a sente",
+    "author" : "William Shakespeare"
+  },
+  {
+    "phrase" : "Desperdício é tudo aquilo que não representa valor para o cliente",
+    "author" : "Richard Whiteley"
+  },
+  {
+    "phrase" : "A convicção é inútil – a menos que se transforme em conduta",
+    "author" : "Thomas Carlyle"
+  },
+  {
+    "phrase" : "Quanto mais distante o administrador do administrado, menos eficiente a administração",
+    "author" : "Phillip Crosby"
+  },
+  {
+    "phrase" : "A felicidade não é algo pronto. Ela vem de suas próprias ações",
+    "author" : "Dalai Lama"
+  },
+  {
+    "phrase" : "Devemos seguir o exemplo dos rios: dão suas águas ao mar e nunca ficam vazios",
+    "author" : "Jefferson Le"
+  },
+  {
+    "phrase" : "Meu maior poder como consultor é ser ignorante e fazer algumas perguntas",
+    "author" : "Peter Drucker"
+  },
+  {
+    "phrase" : "O cliente é alguém que nos traz suas necessidades",
+    "author" : "L. L. Bean Inc"
+  },
+  {
+    "phrase" : "O pior erro que você pode cometer em sua vida é ficar com medo de cometer algum erro",
+    "author" : "Elbert Hubbard"
+  },
+  {
+    "phrase" : "Se houver uma opção melhor, os clientes mudarão de fornecedor",
+    "author" : "Catherine Romano"
+  },
+  {
+    "phrase" : "O alvo na vida não deve ser ultrapassar os outros, mas sim ultrapassar a nós mesmos",
+    "author" : "M. J. Babcock"
+  },
+  {
+    "phrase" : "Quando são cometidos lapsos nos serviços, as vendas caem",
+    "author" : "Terrell Harris"
+  },
+  {
+    "phrase" : "Jamais prometa mais do que pode fazer",
+    "author" : "Publilius Syrus"
+  },
+  {
+    "phrase" : "Se você for direto e honesto com seus clientes eles o tratarão como amigo",
+    "author" : "Milton Moore"
+  },
+  {
+    "phrase" : "Não arriscar nada é arriscar tudo",
+    "author" : "Cesare Cant"
+  },
+  {
+    "phrase" : "Não se comprometa a fazer o que não é capaz, mas preocupe-se em manter sua promessa",
+    "author" : "George Washington"
+  },
+  {
+    "phrase" : "Quando você atende ao telefone, a imagem da sua empresa é percebida do outro lado da linha",
+    "author" : "Video Business Magazine"
+  },
+  {
+    "phrase" : "Um investimento em conhecimento sempre paga o maior juro",
+    "author" : "Benjamin Franklin"
+  },
+  {
+    "phrase" : "Contrate o tipo de pessoa capaz de construir relações sólidas com os clientes",
+    "author" : "Lunda Goldzimer"
+  },
+  {
+    "phrase" : "Não abandone suas três grandes e inabaláveis amigas: a intuição, a inocência e a fé",
+    "author" : "George Gurdjieff"
+  },
+  {
+    "phrase" : "Quem sabe faz a hora, não espera acontecer",
+    "author" : "Geraldo Vandré"
+  },
+  {
+    "phrase" : "A única coisa que sabemos sobre o futuro é que ele será diferente",
+    "author" : "Peter Drucker"
+  },
+  {
+    "phrase" : "Quando você perde um cliente, perde transações futuras e propaganda boca a boca",
+    "author" : "David Clutterbuck"
+  },
+  {
+    "phrase" : "Eu me sentia derrotado por não ter sapatos, até o dia que encontrei um homem que não tinha pés",
+    "author" : "Harols Abbott"
+  },
+  {
+    "phrase" : "Uma empresa que não escuta o seu cliente está fadada ao insucesso",
+    "author" : "Paulo Apsan"
+  },
+  {
+    "phrase" : "Se você não é notado, você não tem nada",
+    "author" : "Leo Burnett"
+  },
+  {
+    "phrase" : "Não são os anos de sua vida que contam. É a vida em seus anos",
+    "author" : "Abraham Lincoln"
+  },
+  {
+    "phrase" : "O marketing de relacionamento reduz o impacto dos esforços feitos pela concorrência",
+    "author" : "Don Peppers"
+  },
+  {
+    "phrase" : "É melhor ser invejado do que lastimado",
+    "author" : "Heródoto"
+  },
+  {
+    "phrase" : "Você pode construir o mais belo lugar do mundo, mas serão as pessoas que tornarão realidade o sonho",
+    "author" : "Walt Disney"
+  },
+  {
+    "phrase" : "Não existe técnica de comunicação mais relevante do que a naturalidade",
+    "author" : "Reinaldo Polito"
+  },
+  {
+    "phrase" : "Na vida sempre fazemos escolhas. Ainda que escolhemos não escolher",
+    "author" : "Carmen Miranda"
+  },
+  {
+    "phrase" : "A melhor maneira de vender é facilitando a compra",
+    "author" : "Sales and Marketing Magazine"
+  },
+  {
+    "phrase" : "A cortesia tem um grande poder, e não custa nada",
+    "author" : "Samuel Smiles"
+  },
+  {
+    "phrase" : "Você pode ficar desapontado se falhar, mas já está derrotado se não tentar",
+    "author" : "Beverly Sills"
+  },
+  {
+    "phrase" : "Se souber o nome do cliente, use em sua saudação",
+    "author" : "Texas American Bank"
+  },
+  {
+    "phrase" : "Ofereça ao cliente algo que vale a pena e ele pagará o que vale",
+    "author" : "Tom Peter e Nancy Austin"
+  },
+  {
+    "phrase" : "Seja hoje melhor do que ontem e, amanhã, melhor do que hoje",
+    "author" : "Constantino C. Vigil"
+  },
+  {
+    "phrase" : "O acordo é o último recurso dos que não têm imaginação",
+    "author" : "Oscar Wilde"
+  },
+  {
+    "phrase" : "Lucro é vital, mas o cliente vem antes. Sem ele não há lucro",
+    "author" : "Richard Whiteley"
+  },
+  {
+    "phrase" : "Sonhe grande e se atreva a falhar",
+    "author" : "Norman Vaughan"
+  },
+  {
+    "phrase" : "Eu sempre uso o produto dos meus clientes; não é bajulação, mas boas maneiras",
+    "author" : "David Ogilvy"
+  },
+  {
+    "phrase" : "Traga novas ideias e trate-as regiamente, pois uma delas pode ser o rei",
+    "author" : "Mark van Doren"
+  },
+  {
+    "phrase" : "Quem quer agradar a todo mundo não agrada a ninguém",
+    "author" : "Dito popular"
+  },
+  {
+    "phrase" : "Leve é a tarefa quando muitos dividem o trabalho",
+    "author" : "Samuel Johnson"
+  },
+  {
+    "phrase" : "Você seria seu próprio cliente?",
+    "author" : "Linda Goldzimer"
+  },
+  {
+    "phrase" : "Ganhar não é tudo, mas querer ganhar é",
+    "author" : "Vince Lombardi"
+  },
+  {
+    "phrase" : "Aquilo que você não pode medir não pode ser aperfeiçoado",
+    "author" : "John Young"
+  },
+  {
+    "phrase" : "O conveniente e o correto raramente são a mesma coisa",
+    "author" : "Charles Brower"
+  },
+  {
+    "phrase" : "A confiabilidade do serviço é fator mais importante de todos, duas vezes acima dos demais",
+    "author" : "Gordon Spainhower"
+  },
+  {
+    "phrase" : "Uma pessoa que nunca cometeu um erro, nunca tentou nada de novo",
+    "author" : "Albert Einstein"
+  },
+  {
+    "phrase" : "Você precisa ver seus erros para poder fazer algo a respeito deles",
+    "author" : "Claus Moller"
+  },
+  {
+    "phrase" : "Se os ventos não vão servir, leve os remos",
+    "author" : "Provérbio norte"
+  },
+  {
+    "phrase" : "Ninguém cativa um cliente sabendo apenas o nome e onde ele mora",
+    "author" : "Sérgio Quartiermeister"
+  },
+  {
+    "phrase" : "O trabalho de adivinhação torna inevitável a insatisfação",
+    "author" : "John Tschohol"
+  },
+  {
+    "phrase" : "Quando deixamos de contribuir, começamos a morrer",
+    "author" : "Eleanor Roosvelt"
+  },
+  {
+    "phrase" : "A chave do negócio é analisar cada cliente antes de servi-lo",
+    "author" : "Laurent Svadon"
+  },
+  {
+    "phrase" : "O problema não é o problema. O problema é a atitude com relação ao problema",
+    "author" : "Kelly Young"
+  },
+  {
+    "phrase" : "Verifique seus sentimentos à porta do escritório",
+    "author" : "Tom Peters"
+  },
+  {
+    "phrase" : "Diga ‘obrigado’ sempre que tiver uma oportunidade",
+    "author" : "Carl Sewell"
+  },
+  {
+    "phrase" : "Você nunca vai chegar ao seu destino se você parar e atirar pedras em cada cão que late",
+    "author" : "Winston Churchill"
+  },
+  {
+    "phrase" : "A confiança dos clientes é o ativo mais valioso de uma companhia de serviços",
+    "author" : "Leonard Berry"
+  },
+  {
+    "phrase" : "Não ergas um edifício sem fortes alicerces ou viverás com medo",
+    "author" : "Sabedoria Persa"
+  },
+  {
+    "phrase" : "Trate seus funcionários assim como quer que eles tratem seus melhores clientes",
+    "author" : "Stephen Covey"
+  },
+  {
+    "phrase" : "Somos damas e cavalheiros servindo damas e cavalheiros",
+    "author" : "Lema do Ritz"
+  },
+  {
+    "phrase" : "Esforce-se para não ser um sucesso, mas sim para ser valioso",
+    "author" : "Albert Einstein"
+  },
+  {
+    "phrase" : "Projete um sistema que equilibre processo, produto e medidas de satisfação",
+    "author" : "Peter Francese"
+  },
+  {
+    "phrase" : "Ouça qualquer um que tenha uma ideia original. Encoraje-o. Deixe as pessoas continuarem suas ideias",
+    "author" : "William McKnight"
+  },
+  {
+    "phrase" : "Satisfaça o cliente no começo, no fim e sempre",
+    "author" : "Phillip Crosby"
+  },
+  {
+    "phrase" : "Eu não falhei no teste. Eu só encontrei 100 maneiras de fazer errado",
+    "author" : "Benjamin Franklin"
+  },
+  {
+    "phrase" : "Quer segurança em um emprego? Faça um cliente feliz",
+    "author" : "Júlio Lobos"
+  },
+  {
+    "phrase" : "O essencial é invisível aos olhos",
+    "author" : "Antoine de Saint"
+  },
+  {
+    "phrase" : "Conheça seus clientes como sua família, satisfaça-os e você terá sucesso",
+    "author" : "Richard Whiteley"
+  },
+  {
+    "phrase" : "Um cliente que reclama é um consultor. Aponta o que melhorar e não cobra nada por isso",
+    "author" : "Sérgio Almeida"
+  },
+  {
+    "phrase" : "Nunca é tarde demais para ser o que você poderia ter sido",
+    "author" : "George Eliot"
+  },
+  {
+    "phrase" : "Não existe melhor publicidade do que um cliente satisfeito",
+    "author" : "Jay Curry e Ludovic Stora"
+  },
+  {
+    "phrase" : "Gerenciar não é mais a direção da coisa, mas o aperfeiçoamento das pessoas",
+    "author" : "Alvin Toffler"
+  },
+  {
+    "phrase" : "A pessoa no comando não pode apenas pregar. Ela precisa liderar com exemplos",
+    "author" : "Carl Sewell"
+  },
+  {
+    "phrase" : "A marca é um símbolo que identifica uma promessa na cabeça do cliente",
+    "author" : "Larry Light"
+  },
+  {
+    "phrase" : "Não há saber mais ou saber menos: há saberes diferentes",
+    "author" : "Paulo Freire"
+  },
+  {
+    "phrase" : "O papel do gerente é de orientar, energizar e estimular",
+    "author" : "Jack Welck"
+  },
+  {
+    "phrase" : "Se você quiser se levantar, levante outra pessoa",
+    "author" : "Booker T. Washington"
+  },
+  {
+    "phrase" : "Você pode tosquiar o carneiro por muitos anos, mas poderá esfolá-lo somente uma vez",
+    "author" : "John Sewell"
+  },
+  {
+    "phrase" : "Quanto maior a dificuldade maior é o mérito de superá-la",
+    "author" : "H. W. Beecher"
+  },
+  {
+    "phrase" : "Cuidar o lado emocional do cliente é mais importante do que consertar um equipamento",
+    "author" : "Bill Bleuel"
+  },
+  {
+    "phrase" : "O cliente compra uma promessa e são obrigados a confiar que a empresa ira cumpri-la",
+    "author" : "Leonard Berry"
+  },
+  {
+    "phrase" : "A questão não é quem vai me deixar; mas sim, quem vai me impedir",
+    "author" : "Ayn Rand"
+  },
+  {
+    "phrase" : "Certifique-se de que suas palavras e seus atos estão em harmonia",
+    "author" : "Claus Moller"
+  },
+  {
+    "phrase" : "As pessoas estão atentas a você. A qualidade está no seu coração",
+    "author" : "Steven Leonard Jr."
+  },
+  {
+    "phrase" : "Nossa paciência conquistará mais do que a nossa força",
+    "author" : "Edmund Burke"
+  },
+  {
+    "phrase" : "Se os clientes não estão reclamando você está perdendo a oportunidade de ser melhor",
+    "author" : "Karl Albrecht"
+  },
+  {
+    "phrase" : "Você pode mudar sem crescer, mas não pode crescer sem mudar",
+    "author" : "Larry Wilson"
+  },
+  {
+    "phrase" : "Agradeça com um sorriso a presença do cliente",
+    "author" : "Texas American Bank"
+  },
+  {
+    "phrase" : "Você não crescerá a não ser que tente algo além daquilo que já domina",
+    "author" : "Ronald Osborn"
+  },
+  {
+    "phrase" : "Faça a voz do cliente ecoar em toda a empresa",
+    "author" : "Richard Whiteley"
+  },
+  {
+    "phrase" : "Tudo o que você sempre quis está do outro lado do seu medo",
+    "author" : "George Addair"
+  },
+  {
+    "phrase" : "Nada contribui tanto para clarear a mente do que um objetivo claro",
+    "author" : "Marry W. Shelley"
+  },
+  {
+    "phrase" : "Um único pensamento pode revolucionar sua vida",
+    "author" : "Norman Vincent Peale"
+  },
+  {
+    "phrase" : "Todo o marketing da sua empresa pode ser anulado por um único empregado grosseiro",
+    "author" : "John Tschohl"
+  },
+  {
+    "phrase" : "Quando compreende-se o que o cliente deseja, torna-se mais fácil atendê-lo",
+    "author" : "Fábio Eltz"
+  },
+  {
+    "phrase" : "Só serão felizes aqueles que procurarem e encontrarem um meio de servir",
+    "author" : "Albert Schweitzer"
+  },
+  {
+    "phrase" : "A percepção que o cliente tem em relação ao seu produto é o que determina sua satisfação",
+    "author" : "Linda Goldzimer"
+  },
+  {
+    "phrase" : "O mais corajoso dos atos ainda é pensar com a própria cabeça",
+    "author" : "Coco Chanel"
+  },
+  {
+    "phrase" : "A coisa mais importante para o cliente é: você fez aquilo que prometeu?",
+    "author" : "Carl Sewell"
+  },
+  {
+    "phrase" : "Nada que valha a pena acontece a alguém exceto o resultado do trabalho árduo",
+    "author" : "Booker T. Washington"
+  },
+  {
+    "phrase" : "A forma mais barata de manter clientes satisfeitos é servi-los bem desde o começo",
+    "author" : "Fortune Magazine"
+  },
+  {
+    "phrase" : "A melhor forma de ter clientes para sempre é oferecer a eles um negócio irrecusável",
+    "author" : "Don Peppers"
+  },
+  {
+    "phrase" : "Tenho aprendido ao longo dos anos que, quando a mente está pronta, isso diminui o medo",
+    "author" : "Rosa Parks"
+  },
+  {
+    "phrase" : "O cliente é o chefe",
+    "author" : "Lema da Bio"
+  },
+  {
+    "phrase" : "Mestre não é quem sempre ensina, mas quem de repente aprende",
+    "author" : "João Guimar"
+  },
+  {
+    "phrase" : "Se não agrega valor, pare; se faz sentido para o cliente, prossiga",
+    "author" : "Bob Harbage"
+  },
+  {
+    "phrase" : "Os clientes sempre reconhecem quando alguém saiu do seu caminho para ajudá-los",
+    "author" : "Leonard Berry"
+  },
+  {
+    "phrase" : "Espíritos grandiosos sempre encontraram oposição violenta de mentes medíocres",
+    "author" : "Albert Einstein"
+  },
+  {
+    "phrase" : "A busca da qualidade é um estado de espírito",
+    "author" : "Cesare Romiti"
+  },
+  {
+    "phrase" : "O que é realmente necessário em empresa que presta serviço são pessoas que gostem de pessoas",
+    "author" : "Frank Petro"
+  },
+  {
+    "phrase" : "É importante aprender a não se aborrecer com opiniões diferentes das suas",
+    "author" : "Bertrand Russell"
+  },
+  {
+    "phrase" : "O melhor vendedor do mundo é um cliente encantado",
+    "author" : "Sérgio Almeida"
+  },
+  {
+    "phrase" : "Ter problemas na vida é inevitável. Ser derrotado por eles é opcional",
+    "author" : "Roger Crowford"
+  },
+  {
+    "phrase" : "Limitar o foco ao cliente provoca uma espécie de cegueira para inovações",
+    "author" : "Paulo Apsan"
+  },
+  {
+    "phrase" : "A prestação de bons serviços nunca é acidental",
+    "author" : "Jaclyn Jeffrey"
+  },
+  {
+    "phrase" : "Você nunca pode atravessar o oceano até que você tenha coragem de perder de vista a costa",
+    "author" : "Cristóvão Colombo"
+  },
+  {
+    "phrase" : "O que pode sair errado? Essa é a pergunta a se fazer ao projetar os seus sistemas",
+    "author" : "Carl Sewell"
+  },
+  {
+    "phrase" : "Toma conta do teu negócio ou ele tomará conta de ti",
+    "author" : "Benjamin Franklin"
+  },
+  {
+    "phrase" : "A satisfação do cliente é uma relação entre o que ele viu e o que ele esperava ver",
+    "author" : "Sérgio Almeida"
+  },
+  {
+    "phrase" : "Perde tudo quem perde o momento certo",
+    "author" : "Provérbio espanhol"
+  },
+  {
+    "phrase" : "Combata a mediocridade – em si e nos outros",
+    "author" : "Claus Moller"
+  },
+  {
+    "phrase" : "Lembre-se que não conseguir o que você quer é algumas vezes um lance de sorte",
+    "author" : "Dalai Lama"
+  },
+  {
+    "phrase" : "Uma atitude vitoriosa é meio caminho andado para o sucesso",
+    "author" : "Arthur Riedel"
+  },
+  {
+    "phrase" : "Agregar valor é resolver os problemas do cliente",
+    "author" : "James Belasco"
+  },
+  {
+    "phrase" : "Fazer rápido obriga-o a fazer certo logo na primeira vez",
+    "author" : "John Young"
+  },
+  {
+    "phrase" : "Devemos preferir as queixas aos cumprimentos",
+    "author" : "Donald Beaver Jr."
+  },
+  {
+    "phrase" : "Todos os sorrisos do mundo não irão ajudá-lo se o produto ou serviço não for o que o cliente deseja",
+    "author" : "Carl Sewell"
+  },
+  {
+    "phrase" : "Um serviço excelente é uma estratégia de lucro",
+    "author" : "Leonard Berry"
+  },
+  {
+    "phrase" : "Você pode tudo se tiver entusiasmo",
+    "author" : "Henry Ford"
+  },
+  {
+    "phrase" : "Não sei aonde vou, mas já estou no caminho",
+    "author" : "Carl Sandburg"
+  },
+  {
+    "phrase" : "Conte a verdade – ou não conte nada. Ninguém gosta de gente mentirosa",
+    "author" : "Fortune Magazine"
+  },
+  {
+    "phrase" : "O insucesso é uma oportunidade para recomeçar com mais inteligência",
+    "author" : "Henry Ford"
+  }
+]

@@ -5,403 +5,403 @@ package data
 
 var PhrasesBR = []Phrase{
 	{
-		Quote: "A persistência é o caminho do êxito.",
+		Phrase: "A persistência é o caminho do êxito.",
 		Author: "Charles Chaplin",
 	},
 	{
-		Quote: "As pessoas costumam dizer que a motivação não dura sempre. Bem, nem o efeito do banho, por isso recomenda-se diariamente.",
+		Phrase: "As pessoas costumam dizer que a motivação não dura sempre. Bem, nem o efeito do banho, por isso recomenda-se diariamente.",
 		Author: "Zig Ziglar",
 	},
 	{
-		Quote: "Motivação é a arte de fazer as pessoas fazerem o que você quer que elas façam porque elas o querem fazer.",
+		Phrase: "Motivação é a arte de fazer as pessoas fazerem o que você quer que elas façam porque elas o querem fazer.",
 		Author: "Dwight Eisenhower",
 	},
 	{
-		Quote: "Toda ação humana, quer se torne positiva ou negativa, precisa depender de motivação.",
+		Phrase: "Toda ação humana, quer se torne positiva ou negativa, precisa depender de motivação.",
 		Author: "Dalai Lama",
 	},
 	{
-		Quote: "No meio da dificuldade encontra-se a oportunidade.",
+		Phrase: "No meio da dificuldade encontra-se a oportunidade.",
 		Author: "Desconhecido",
 	},
 	{
-		Quote: "Lute. Acredite. Conquiste. Perca. Deseje. Espere. Alcance. Invada. Caia. Seja tudo o quiser ser, mas acima de tudo, seja você sempre.",
+		Phrase: "Lute. Acredite. Conquiste. Perca. Deseje. Espere. Alcance. Invada. Caia. Seja tudo o quiser ser, mas acima de tudo, seja você sempre.",
 		Author: "Tumblr",
 	},
 	{
-		Quote: "Eu faço da dificuldade a minha motivação. A volta por cima vem na continuação.",
+		Phrase: "Eu faço da dificuldade a minha motivação. A volta por cima vem na continuação.",
 		Author: "Charlie Brown Jr",
 	},
 	{
-		Quote: "A verdadeira motivação vem de realização, desenvolvimento pessoal, satisfação no trabalho e reconhecimento.",
+		Phrase: "A verdadeira motivação vem de realização, desenvolvimento pessoal, satisfação no trabalho e reconhecimento.",
 		Author: "Frederick Herzberg",
 	},
 	{
-		Quote: "Pedras no caminho? Eu guardo todas. Um dia vou construir um castelo.",
+		Phrase: "Pedras no caminho? Eu guardo todas. Um dia vou construir um castelo.",
 		Author: "Nemo Nox",
 	},
 	{
-		Quote: "É parte da cura o desejo de ser curado.",
+		Phrase: "É parte da cura o desejo de ser curado.",
 		Author: "Sêneca",
 	},
 	{
-		Quote: "Tudo o que um sonho precisa para ser realizado é alguém que acredite que ele possa ser realizado.",
+		Phrase: "Tudo o que um sonho precisa para ser realizado é alguém que acredite que ele possa ser realizado.",
 		Author: "Roberto Shinyashiki",
 	},
 	{
-		Quote: "O que me preocupa não é o grito dos maus. É o silêncio dos bons.",
+		Phrase: "O que me preocupa não é o grito dos maus. É o silêncio dos bons.",
 		Author: "Martin Luther King",
 	},
 	{
-		Quote: "Imagine uma nova história para sua vida e acredite nela.",
+		Phrase: "Imagine uma nova história para sua vida e acredite nela.",
 		Author: "Paulo Coelho",
 	},
 	{
-		Quote: "O insucesso é apenas uma oportunidade para recomeçar com mais inteligência.",
+		Phrase: "O insucesso é apenas uma oportunidade para recomeçar com mais inteligência.",
 		Author: "Henry Ford",
 	},
 	{
-		Quote: "Quando você quer alguma coisa, todo o universo conspira para que você realize o seu desejo.",
+		Phrase: "Quando você quer alguma coisa, todo o universo conspira para que você realize o seu desejo.",
 		Author: "Paulo Coelho",
 	},
 	{
-		Quote: "Você precisa fazer aquilo que pensa que não é capaz de fazer.",
+		Phrase: "Você precisa fazer aquilo que pensa que não é capaz de fazer.",
 		Author: "Eleanor Roosevelt",
 	},
 	{
-		Quote: "O sucesso é ir de fracasso em fracasso sem perder entusiasmo.",
+		Phrase: "O sucesso é ir de fracasso em fracasso sem perder entusiasmo.",
 		Author: "Winston Churchill",
 	},
 	{
-		Quote: "Só se pode alcançar um grande êxito quando nos mantemos fiéis a nós mesmos.",
+		Phrase: "Só se pode alcançar um grande êxito quando nos mantemos fiéis a nós mesmos.",
 		Author: "Friedrich Nietzsche",
 	},
 	{
-		Quote: "Lute com determinação, abrace a vida com paixão, perca com classe e vença com ousadia, porque o mundo pertence a quem se atreve e a vida é muito para ser insignificante.",
+		Phrase: "Lute com determinação, abrace a vida com paixão, perca com classe e vença com ousadia, porque o mundo pertence a quem se atreve e a vida é muito para ser insignificante.",
 		Author: "Augusto Branco",
 	},
 	{
-		Quote: "Nossa maior fraqueza está em desistir. O caminho mais certo de vencer é tentar mais uma vez.",
+		Phrase: "Nossa maior fraqueza está em desistir. O caminho mais certo de vencer é tentar mais uma vez.",
 		Author: "Thomas Edison",
 	},
 	{
-		Quote: "O sucesso nasce do querer, da determinação e persistência em se chegar a um objetivo. Mesmo não atingindo o alvo, quem busca e vence obstáculos, no mínimo fará coisas admiráveis.",
+		Phrase: "O sucesso nasce do querer, da determinação e persistência em se chegar a um objetivo. Mesmo não atingindo o alvo, quem busca e vence obstáculos, no mínimo fará coisas admiráveis.",
 		Author: "José de Alencar",
 	},
 	{
-		Quote: "Se você quer ser bem-sucedido precisa de dedicação total, buscar seu último limite e dar o melhor de si mesmo.",
+		Phrase: "Se você quer ser bem-sucedido precisa de dedicação total, buscar seu último limite e dar o melhor de si mesmo.",
 		Author: "Ayrton Senna",
 	},
 	{
-		Quote: "Não crie limites para si mesmo. Você deve ir tão longe quanto sua mente permitir. O que você mais quer pode ser conquistado.",
+		Phrase: "Não crie limites para si mesmo. Você deve ir tão longe quanto sua mente permitir. O que você mais quer pode ser conquistado.",
 		Author: "Mary Kay Ash",
 	},
 	{
-		Quote: "Nenhum obstáculo será grande se a sua vontade de vencer for maior.",
+		Phrase: "Nenhum obstáculo será grande se a sua vontade de vencer for maior.",
 		Author: "Autor desconhecido",
 	},
 	{
-		Quote: "Dificuldades preparam pessoas comuns para destinos extraordinários.",
+		Phrase: "Dificuldades preparam pessoas comuns para destinos extraordinários.",
 		Author: " C.S Lewis",
 	},
 	{
-		Quote: "Nenhum homem será um grande líder se quiser fazer tudo sozinho ou se quiser levar todo o crédito por fazer isso.",
+		Phrase: "Nenhum homem será um grande líder se quiser fazer tudo sozinho ou se quiser levar todo o crédito por fazer isso.",
 		Author: "Andrew Carnegie",
 	},
 	{
-		Quote: "Bom mesmo é ir à luta com determinação, abraçar a vida com paixão, perder com classe e vencer com ousadia, porque o mundo pertence a quem se atreve e a vida é muito curta, para ser insignificante.",
+		Phrase: "Bom mesmo é ir à luta com determinação, abraçar a vida com paixão, perder com classe e vencer com ousadia, porque o mundo pertence a quem se atreve e a vida é muito curta, para ser insignificante.",
 		Author: "Charlie Chaplin",
 	},
 	{
-		Quote: "Pessoas vencedoras não são aquelas que não falham, são aquelas que não desistem.",
+		Phrase: "Pessoas vencedoras não são aquelas que não falham, são aquelas que não desistem.",
 		Author: "Autor desconhecido",
 	},
 	{
-		Quote: "Só existem dois dias do ano em que você não pode fazer nada: um se chama ontem e outro amanhã.",
+		Phrase: "Só existem dois dias do ano em que você não pode fazer nada: um se chama ontem e outro amanhã.",
 		Author: "Dalai Lama",
 	},
 	{
-		Quote: "A vida é um constante recomeço. Não se dê por derrotado e siga adiante. As pedras que hoje atrapalham sua caminhada amanhã enfeitarão a sua estrada.",
+		Phrase: "A vida é um constante recomeço. Não se dê por derrotado e siga adiante. As pedras que hoje atrapalham sua caminhada amanhã enfeitarão a sua estrada.",
 		Author: " Autor desconhecido",
 	},
 	{
-		Quote: "Ouse ir além, ouse fazer diferente e o poder lhe será dado!.",
+		Phrase: "Ouse ir além, ouse fazer diferente e o poder lhe será dado!.",
 		Author: "José Roberto Marques",
 	},
 	{
-		Quote: "Ouse, arrisque, não desista jamais e saiba valorizar quem te ama, esses sim merecem seu respeito. Quanto ao resto, bom, ninguém nunca precisou de restos para ser feliz.",
+		Phrase: "Ouse, arrisque, não desista jamais e saiba valorizar quem te ama, esses sim merecem seu respeito. Quanto ao resto, bom, ninguém nunca precisou de restos para ser feliz.",
 		Author: "Clarice Lispector",
 	},
 	{
-		Quote: "Para ser um campeão você tem que acreditar em si mesmo quando ninguém mais acredita.",
+		Phrase: "Para ser um campeão você tem que acreditar em si mesmo quando ninguém mais acredita.",
 		Author: "Muhammad Ali",
 	},
 	{
-		Quote: "No fim tudo dá certo, e se não deu certo é porque ainda não chegou ao fim.",
+		Phrase: "No fim tudo dá certo, e se não deu certo é porque ainda não chegou ao fim.",
 		Author: "Fernando Sabino",
 	},
 	{
-		Quote: "Você nunca sabe que resultados virão da sua ação. Mas se você não fizer nada, não existirão resultados.",
+		Phrase: "Você nunca sabe que resultados virão da sua ação. Mas se você não fizer nada, não existirão resultados.",
 		Author: "Mahatma Gandhi",
 	},
 	{
-		Quote: "O pessimista vê dificuldade em toda oportunidade. O otimista vê oportunidade em toda dificuldade.",
+		Phrase: "O pessimista vê dificuldade em toda oportunidade. O otimista vê oportunidade em toda dificuldade.",
 		Author: "Winston Churchill",
 	},
 	{
-		Quote: "A paciência é um elemento fundamental do sucesso.",
+		Phrase: "A paciência é um elemento fundamental do sucesso.",
 		Author: "Bill Gates",
 	},
 	{
-		Quote: "Reclamar não é uma estratégia. É necessário lidarmos com o mundo como ele é e não como gostaríamos que ele fosse.",
+		Phrase: "Reclamar não é uma estratégia. É necessário lidarmos com o mundo como ele é e não como gostaríamos que ele fosse.",
 		Author: "Jeff Bezos",
 	},
 	{
-		Quote: "O sucesso não tem a ver com o lugar de onde você veio, e sim com a confiança que você tem e o esforço que você está disposto a investir.",
+		Phrase: "O sucesso não tem a ver com o lugar de onde você veio, e sim com a confiança que você tem e o esforço que você está disposto a investir.",
 		Author: "Michelle Obama",
 	},
 	{
-		Quote: "Você pode encarar um erro como uma besteira a ser esquecida, ou como um resultado que aponta uma nova direção.",
+		Phrase: "Você pode encarar um erro como uma besteira a ser esquecida, ou como um resultado que aponta uma nova direção.",
 		Author: "Steve Jobs",
 	},
 	{
-		Quote: "Você não pode ser uma pessoa difícil, tímida, que não é capaz de olhar alguém nos olhos; você tem que se apresentar. Você tem que saber como falar sobre si mesmo, sua visão, o seu foco e em que você acredita.",
+		Phrase: "Você não pode ser uma pessoa difícil, tímida, que não é capaz de olhar alguém nos olhos; você tem que se apresentar. Você tem que saber como falar sobre si mesmo, sua visão, o seu foco e em que você acredita.",
 		Author: "Anna Wintour",
 	},
 	{
-		Quote: "Eu posso aceitar a falha, todos falham em alguma coisa. Mas eu não posso aceitar não tentar.",
+		Phrase: "Eu posso aceitar a falha, todos falham em alguma coisa. Mas eu não posso aceitar não tentar.",
 		Author: "Michael Jordan",
 	},
 	{
-		Quote: "Gostaria que você soubesse que existe dentro de si uma força capaz de mudar sua vida. Basta que lute e aguarde um novo amanhecer.",
+		Phrase: "Gostaria que você soubesse que existe dentro de si uma força capaz de mudar sua vida. Basta que lute e aguarde um novo amanhecer.",
 		Author: "Margaret Thatcher",
 	},
 	{
-		Quote: "Inteligência é a capacidade de se adaptar às mudanças.",
+		Phrase: "Inteligência é a capacidade de se adaptar às mudanças.",
 		Author: "Stephen Hawking",
 	},
 	{
-		Quote: "É preciso ser protagonista. Não dá para ficar só ouvindo a banda passar, temos de ser parte da banda.",
+		Phrase: "É preciso ser protagonista. Não dá para ficar só ouvindo a banda passar, temos de ser parte da banda.",
 		Author: "Sônia Hess",
 	},
 	{
-		Quote: "A arte de ser ora audacioso, ora prudente, é a arte de vencer.",
+		Phrase: "A arte de ser ora audacioso, ora prudente, é a arte de vencer.",
 		Author: "Napoleão Bonaparte",
 	},
 	{
-		Quote: "Nossos fracassos, às vezes, são mais frutíferos do que os êxitos.",
+		Phrase: "Nossos fracassos, às vezes, são mais frutíferos do que os êxitos.",
 		Author: "Henry Ford",
 	},
 	{
-		Quote: "Comemore os seus sucessos. Veja com humor os seus fracassos.",
+		Phrase: "Comemore os seus sucessos. Veja com humor os seus fracassos.",
 		Author: "Sam Walton",
 	},
 	{
-		Quote: "Não somos responsáveis apenas pelo que fazemos, mas também pelo que deixamos de fazer.",
+		Phrase: "Não somos responsáveis apenas pelo que fazemos, mas também pelo que deixamos de fazer.",
 		Author: "Moliere",
 	},
 	{
-		Quote: "É costume de um tolo, quando erra, queixar-se dos outros. É costume de um sábio queixar-se de si mesmo.",
+		Phrase: "É costume de um tolo, quando erra, queixar-se dos outros. É costume de um sábio queixar-se de si mesmo.",
 		Author: "Sócrates",
 	},
 	{
-		Quote: "Existe o risco que você jamais pode correr. Existe o risco que você jamais pode deixar de correr.",
+		Phrase: "Existe o risco que você jamais pode correr. Existe o risco que você jamais pode deixar de correr.",
 		Author: "Peter Drucker",
 	},
 	{
-		Quote: "Mesmo que já tenhas feito uma longa caminhada, há sempre um novo caminho a fazer.",
+		Phrase: "Mesmo que já tenhas feito uma longa caminhada, há sempre um novo caminho a fazer.",
 		Author: "Santo Agostinho",
 	},
 	{
-		Quote: "A felicidade não está em fazer o que a gente quer, e sim querer o que a gente faz.",
+		Phrase: "A felicidade não está em fazer o que a gente quer, e sim querer o que a gente faz.",
 		Author: "Jean Paul Sartre",
 	},
 	{
-		Quote: "É sempre divertido fazer o impossível.",
+		Phrase: "É sempre divertido fazer o impossível.",
 		Author: "Walt Disney",
 	},
 	{
-		Quote: "Experiência é o nome que cada um dá a seus erros.",
+		Phrase: "Experiência é o nome que cada um dá a seus erros.",
 		Author: "Oscar Wilde",
 	},
 	{
-		Quote: "Somente os que ousam errar muito podem realizar muito.",
+		Phrase: "Somente os que ousam errar muito podem realizar muito.",
 		Author: "John F. Kennedy",
 	},
 	{
-		Quote: "Somos o que repetidamente fazemos. Portanto, a excelência não é um feito, é um hábito.",
+		Phrase: "Somos o que repetidamente fazemos. Portanto, a excelência não é um feito, é um hábito.",
 		Author: "Aristóteles",
 	},
 	{
-		Quote: "Toda empresa precisa ter gente que erra, que não tem medo de errar e que aprende com erro.",
+		Phrase: "Toda empresa precisa ter gente que erra, que não tem medo de errar e que aprende com erro.",
 		Author: "Bill Gates",
 	},
 	{
-		Quote: "A confiança em si mesmo é o primeiro segredo do sucesso.",
+		Phrase: "A confiança em si mesmo é o primeiro segredo do sucesso.",
 		Author: "Ralph Waldo Emerson",
 	},
 	{
-		Quote: "Aquele que pretende ser um líder tem que ser uma ponte.",
+		Phrase: "Aquele que pretende ser um líder tem que ser uma ponte.",
 		Author: "Provérbio Galês",
 	},
 	{
-		Quote: "Muda tuas ideias e mudarás teu mundo.",
+		Phrase: "Muda tuas ideias e mudarás teu mundo.",
 		Author: "Norman Vincent Peale",
 	},
 	{
-		Quote: "A vitória sempre foi de quem nunca duvidou dela.",
+		Phrase: "A vitória sempre foi de quem nunca duvidou dela.",
 		Author: "Raul Follerean",
 	},
 	{
-		Quote: "Se existe uma forma de fazer melhor, descubra-a.",
+		Phrase: "Se existe uma forma de fazer melhor, descubra-a.",
 		Author: "Thomas Edison",
 	},
 	{
-		Quote: "O problema é que a maioria das pessoas prefere um elogio que prejudique do que uma crítica que beneficie.",
+		Phrase: "O problema é que a maioria das pessoas prefere um elogio que prejudique do que uma crítica que beneficie.",
 		Author: "Norman Vincent Peale",
 	},
 	{
-		Quote: "A sorte favorece a mente preparada.",
+		Phrase: "A sorte favorece a mente preparada.",
 		Author: "Louis Pasteur",
 	},
 	{
-		Quote: "Não há sucesso sem dificuldade.",
+		Phrase: "Não há sucesso sem dificuldade.",
 		Author: "Sófocles",
 	},
 	{
-		Quote: "A maior recompensa pelo trabalho não é o que a pessoa ganha, é o que ela se torna através dele.",
+		Phrase: "A maior recompensa pelo trabalho não é o que a pessoa ganha, é o que ela se torna através dele.",
 		Author: "John Ruskin",
 	},
 	{
-		Quote: "Não encontre defeitos, encontre soluções. Qualquer um sabe queixar-se.",
+		Phrase: "Não encontre defeitos, encontre soluções. Qualquer um sabe queixar-se.",
 		Author: "Henry Ford",
 	},
 	{
-		Quote: "Conhecimento não é aquilo que você sabe, mas o que você faz com aquilo que sabe.",
+		Phrase: "Conhecimento não é aquilo que você sabe, mas o que você faz com aquilo que sabe.",
 		Author: "Aldous Huxley",
 	},
 	{
-		Quote: "Critica o que fazes, e não faças o que criticas.",
+		Phrase: "Critica o que fazes, e não faças o que criticas.",
 		Author: "Provérbio Árabe",
 	},
 	{
-		Quote: "Se sonhar grande dá o mesmo trabalho que sonhar pequeno, por que vou sonhar pequeno?.",
+		Phrase: "Se sonhar grande dá o mesmo trabalho que sonhar pequeno, por que vou sonhar pequeno?.",
 		Author: "Jorge Paulo Lemann",
 	},
 	{
-		Quote: "Por vezes sentimos que aquilo que fazemos não é senão uma gota de água no mar. Mas o mar seria menor se lhe faltasse uma gota.",
+		Phrase: "Por vezes sentimos que aquilo que fazemos não é senão uma gota de água no mar. Mas o mar seria menor se lhe faltasse uma gota.",
 		Author: "Madre Teresa de Calcutá",
 	},
 	{
-		Quote: "Destino não é exterior a nós; somos nós que criamos nosso próprio destino dia após dia.",
+		Phrase: "Destino não é exterior a nós; somos nós que criamos nosso próprio destino dia após dia.",
 		Author: "Henry Miller",
 	},
 	{
-		Quote: "Ontem foi ontem, já passou. Hoje é hoje e é o que nos importa. Amanhã, o futuro, a Deus pertence.",
+		Phrase: "Ontem foi ontem, já passou. Hoje é hoje e é o que nos importa. Amanhã, o futuro, a Deus pertence.",
 		Author: "Samuel Klein",
 	},
 	{
-		Quote: "Você precisa fazer aquilo que pensa que não é capaz de fazer.",
+		Phrase: "Você precisa fazer aquilo que pensa que não é capaz de fazer.",
 		Author: "Eleanor Roosevelt",
 	},
 	{
-		Quote: "Faça o que puder, com o que tiver, onde estiver.",
+		Phrase: "Faça o que puder, com o que tiver, onde estiver.",
 		Author: "Theodore Roosevelt",
 	},
 	{
-		Quote: "A vida é curta demais. Não corra o risco de passar seus dias apenas afinando seu instrumento sem jamais fazer um grande espetáculo.",
+		Phrase: "A vida é curta demais. Não corra o risco de passar seus dias apenas afinando seu instrumento sem jamais fazer um grande espetáculo.",
 		Author: "Carlos Wizard Martins",
 	},
 	{
-		Quote: "Tudo que você precisa fazer é mover as pessoas só um pouquinho para mudanças acontecerem. Não precisa ser algo enorme.",
+		Phrase: "Tudo que você precisa fazer é mover as pessoas só um pouquinho para mudanças acontecerem. Não precisa ser algo enorme.",
 		Author: "Viola Davis",
 	},
 	{
-		Quote: "Nossas dúvidas são traidoras e nos fazem perder, por medo de tentar, o que poderíamos ganhar.",
+		Phrase: "Nossas dúvidas são traidoras e nos fazem perder, por medo de tentar, o que poderíamos ganhar.",
 		Author: "William Shakespeare",
 	},
 	{
-		Quote: "Se você quer fazer uma coisa realmente grande, seja grande como a coisa que você quer fazer.",
+		Phrase: "Se você quer fazer uma coisa realmente grande, seja grande como a coisa que você quer fazer.",
 		Author: "Nizan Guanaes",
 	},
 	{
-		Quote: "Aquele que é feliz, espalha felicidade. Aquele que teima na infelicidade, que perde o equilíbrio e a confiança, perde-se na vida.",
+		Phrase: "Aquele que é feliz, espalha felicidade. Aquele que teima na infelicidade, que perde o equilíbrio e a confiança, perde-se na vida.",
 		Author: "Anne Frank",
 	},
 	{
-		Quote: "Os problemas são apenas oportunidades com roupas de trabalho.",
+		Phrase: "Os problemas são apenas oportunidades com roupas de trabalho.",
 		Author: "Henry John Kaiser",
 	},
 	{
-		Quote: "Na crise, existem aqueles que se abatem, sentam no chão e choram; e existem aqueles que fabricam e vendem lenços. Nós somos fabricantes de lenços.",
+		Phrase: "Na crise, existem aqueles que se abatem, sentam no chão e choram; e existem aqueles que fabricam e vendem lenços. Nós somos fabricantes de lenços.",
 		Author: "Abilio Diniz",
 	},
 	{
-		Quote: "Levanto a minha voz, não para que eu possa gritar, mas para que aqueles sem voz possam ser ouvidos….",
+		Phrase: "Levanto a minha voz, não para que eu possa gritar, mas para que aqueles sem voz possam ser ouvidos….",
 		Author: "Malala Yousafzai",
 	},
 	{
-		Quote: "Em todas as situações, deve-se considerar o objetivo.",
+		Phrase: "Em todas as situações, deve-se considerar o objetivo.",
 		Author: "Jean de La Fontaine",
 	},
 	{
-		Quote: "Se você quer saber o quanto você é forte, é na necessidade que descobrimos que somos gigantes.",
+		Phrase: "Se você quer saber o quanto você é forte, é na necessidade que descobrimos que somos gigantes.",
 		Author: "Cleusa Maria da Silva",
 	},
 	{
-		Quote: "Só se aprende com a experiência. Portanto, não importa o que as pessoas lhe digam, você tem que viver e cometer seus próprios erros para aprender.",
+		Phrase: "Só se aprende com a experiência. Portanto, não importa o que as pessoas lhe digam, você tem que viver e cometer seus próprios erros para aprender.",
 		Author: "Emma Watson",
 	},
 	{
-		Quote: "É o motivo que engrandece a ação; é o fazer, não o feito.",
+		Phrase: "É o motivo que engrandece a ação; é o fazer, não o feito.",
 		Author: "Margaret Preston",
 	},
 	{
-		Quote: "Um grande líder é exemplo pela atitude, não pelo discurso.",
+		Phrase: "Um grande líder é exemplo pela atitude, não pelo discurso.",
 		Author: "Robinson Shiba",
 	},
 	{
-		Quote: "Sucesso é mais frequentemente alcançado por aqueles que não sabem que o fracasso é inevitável.",
+		Phrase: "Sucesso é mais frequentemente alcançado por aqueles que não sabem que o fracasso é inevitável.",
 		Author: "Coco Chanel",
 	},
 	{
-		Quote: "Quem vive sem disciplina morre sem honra.",
+		Phrase: "Quem vive sem disciplina morre sem honra.",
 		Author: "Provérbio islandês",
 	},
 	{
-		Quote: "Um dia é preciso parar de sonhar, tirar os planos da gaveta e, de algum modo, começar.",
+		Phrase: "Um dia é preciso parar de sonhar, tirar os planos da gaveta e, de algum modo, começar.",
 		Author: "Amyr Klink",
 	},
 	{
-		Quote: "A maior descoberta de todos os tempos é que uma pessoa pode mudar, simplesmente mudando de atitude.",
+		Phrase: "A maior descoberta de todos os tempos é que uma pessoa pode mudar, simplesmente mudando de atitude.",
 		Author: "Oprah Winfrey",
 	},
 	{
-		Quote: "Mesmo se você estiver no caminho certo será atropelado se ficar sentado nele.",
+		Phrase: "Mesmo se você estiver no caminho certo será atropelado se ficar sentado nele.",
 		Author: "Will Rogers",
 	},
 	{
-		Quote: "O fundamental é manter sempre a mesma obsessão em alcançar o sucesso. Ter sucesso não é apenas ter dinheiro, mas sim saber que uma ideia que parece impossível pode vir a ser uma empresa que irá quebrar paradigmas.",
+		Phrase: "O fundamental é manter sempre a mesma obsessão em alcançar o sucesso. Ter sucesso não é apenas ter dinheiro, mas sim saber que uma ideia que parece impossível pode vir a ser uma empresa que irá quebrar paradigmas.",
 		Author: "Romero Rodrigues",
 	},
 	{
-		Quote: "O jeito mais eficiente de fazer algo é fazendo.",
+		Phrase: "O jeito mais eficiente de fazer algo é fazendo.",
 		Author: "Amelia Earhart",
 	},
 	{
-		Quote: "O insucesso é uma oportunidade para recomeçar com mais inteligência.",
+		Phrase: "O insucesso é uma oportunidade para recomeçar com mais inteligência.",
 		Author: "Henry Ford",
 	},
 	{
-		Quote: "O liderado será reflexo da sua liderança, então quem espera lealdade, primeiro deve ser leal.",
+		Phrase: "O liderado será reflexo da sua liderança, então quem espera lealdade, primeiro deve ser leal.",
 		Author: "Flávio Augusto.",
 	},
 	{
-		Quote: "Sozinhos, pouco podemos fazer; juntos, podemos fazer muito.",
+		Phrase: "Sozinhos, pouco podemos fazer; juntos, podemos fazer muito.",
 		Author: "Helen Keller",
 	},
 	{
-		Quote: "Uma atitude vitoriosa é meio caminho andado para o sucesso.",
+		Phrase: "Uma atitude vitoriosa é meio caminho andado para o sucesso.",
 		Author: "Arthur Riedel",
 	},
 }
