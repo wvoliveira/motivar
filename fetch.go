@@ -5,8 +5,10 @@ import (
 	"crypto/sha256"
 	"encoding/csv"
 	"encoding/hex"
+	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/wvoliveira/motivar/data"
 	"log/slog"
 	"net/http"
 	"os"
@@ -19,30 +21,49 @@ import (
 //
 // Supported file types: csv and json.
 // Use files in the samples folder to develop some fetch feature.
+//
+// TODO:
+// - Create content hash after unmarshal in lang object.
+// - Format quotes with capitalize first letter and add period at the end.
 
 const BodyMaxLength = 200000
+
+type req struct {
+	Body           []byte
+	BodyHash       string
+	CSVContent     [][]string
+	Phrases        []data.Phrase
+	DatabaseObject []databasePhrase
+}
 
 func fetchAndSave(db *database, kind, url, language string) (err error) {
 	if kind == "" || url == "" || language == "" {
 		return errors.New("kind, url or language is empty")
 	}
 
-	if kind == "csv" {
+	var r req
+
+	switch kind {
+	case "csv":
 		logg.Info(fmt.Sprintf("Fetching %s", url))
-		content, contentHash, err := csvFetch(url)
+		content, contentHash, err := fetch(url)
 		if err != nil {
 			return err
 		}
 		logg.Debug(fmt.Sprintf("Hash of content: %s", contentHash))
+		r.Body = content
+		r.BodyHash = contentHash
 
 		logg.Info("Trying to convert bytes to CSV format...")
-		csvLines, err := convertToCSV(content)
+		csvLines, err := r.ConvertToCSV()
 		if err != nil {
 			return err
 		}
 
+		r.CSVContent = csvLines
+
 		logg.Info("Checking if hash content exists in database.")
-		exists, err := db.contentHashExists(contentHash)
+		exists, err := db.contentHashExists(r.BodyHash)
 		if err != nil {
 			return err
 		}
@@ -52,24 +73,68 @@ func fetchAndSave(db *database, kind, url, language string) (err error) {
 			os.Exit(1)
 		}
 
-		logg.Info("Parse CSV content to language object.")
-		phrases, err := csvParse(csvLines, url, language, contentHash)
+		logg.Info("Parse CSV content to database object.")
+		databasePhrases, err := r.CSVToDatabaseObject(language)
 		if err != nil {
 			return err
 		}
+		r.DatabaseObject = databasePhrases
 
 		logg.Info("Inserting in the database...")
-		err = db.InsertPhrases(phrases, contentHash)
+		err = db.InsertPhrases(r.DatabaseObject, url, r.BodyHash)
 		if err != nil {
 			return err
 		}
 
 		logg.Info("OK, phrases into database.")
+	case "json":
+		logg.Info(fmt.Sprintf("Fetching %s", url))
+		content, contentHash, err := fetch(url)
+		if err != nil {
+			return err
+		}
+		logg.Debug(fmt.Sprintf("Hash of content: %s", contentHash))
+
+		r.Body = content
+		r.BodyHash = contentHash
+
+		logg.Info("Trying to convert bytes to CSV format...")
+		if !r.IsJSON() {
+			return errors.New("invalid JSON format")
+		}
+
+		logg.Info("Checking if hash content exists in database.")
+		exists, err := db.contentHashExists(r.BodyHash)
+		if err != nil {
+			return err
+		}
+
+		if exists {
+			logg.Warn("This content already exists in the database. Bye.")
+			os.Exit(1)
+		}
+
+		logg.Info("Trying to convert to database Object.")
+		databasePhrases, err := r.JSONToDatabaseObject(language)
+		if err != nil {
+			return err
+		}
+		r.DatabaseObject = databasePhrases
+
+		logg.Info("Inserting in the database...")
+		err = db.InsertPhrases(r.DatabaseObject, url, r.BodyHash)
+		if err != nil {
+			return err
+		}
+
+		logg.Info("OK, phrases into database.")
+	default:
+		return errors.New("unknown kind")
 	}
 	return nil
 }
 
-func csvFetch(url string) ([]byte, string, error) {
+func fetch(url string) ([]byte, string, error) {
 	resp, err := http.Get(url)
 	die(err)
 
@@ -95,7 +160,7 @@ func csvFetch(url string) ([]byte, string, error) {
 		length += n
 
 		if length > BodyMaxLength {
-			slog.Error("the body (%v) exceeded the limit (%v)", length, BodyMaxLength)
+			slog.Error(fmt.Sprintf("the body (%v) exceeded the limit (%v)", length, BodyMaxLength))
 			os.Exit(1)
 		}
 	}
@@ -108,8 +173,13 @@ func csvFetch(url string) ([]byte, string, error) {
 	return body, contentHash, nil
 }
 
-func convertToCSV(body []byte) (csvLines [][]string, err error) {
-	reader := csv.NewReader(bytes.NewReader(body))
+func (r req) IsJSON() bool {
+	var temp []map[string]interface{}
+	return json.Unmarshal(r.Body, &temp) == nil
+}
+
+func (r req) ConvertToCSV() (csvLines [][]string, err error) {
+	reader := csv.NewReader(bytes.NewReader(r.Body))
 	csvLines, err = reader.ReadAll()
 	if err != nil {
 		return [][]string{}, err
@@ -117,10 +187,18 @@ func convertToCSV(body []byte) (csvLines [][]string, err error) {
 	return csvLines, nil
 }
 
-func csvParse(csvLines [][]string, url, language, hash string) (dp []databasePhrase, err error) {
+func convertFromJSON(body []byte, object *[]data.Phrase) (err error) {
+	return json.Unmarshal(body, &object)
+}
+
+func (r req) CSVToDatabaseObject(language string) (dbPhrases []databasePhrase, err error) {
+	if language == "" {
+		return dbPhrases, errors.New("url or language is empty")
+	}
+
 	// Here we jump the first line to not process the headers.
 	// Maybe a flag or describe in help message to warn the final user?
-	for _, line := range csvLines[1:] {
+	for _, line := range r.CSVContent[1:] {
 		// In the CSV content, each line needs to have length of two.
 		// First is author and second is phrase.
 		if len(line) != 2 {
@@ -136,16 +214,48 @@ func csvParse(csvLines [][]string, url, language, hash string) (dp []databasePhr
 		phraseHash := generateHash(line[1])
 
 		phrase := databasePhrase{
-			URL:         url,
-			ContentHash: hash,
+			ContentHash: r.BodyHash,
 			Author:      line[0],
 			Phrase:      line[1],
 			PhraseHash:  phraseHash,
 			Language:    language,
 		}
-		dp = append(dp, phrase)
+		dbPhrases = append(dbPhrases, phrase)
 	}
-	return dp, nil
+	return dbPhrases, nil
+}
+
+func (r req) JSONToDatabaseObject(language string) (dbPhrases []databasePhrase, err error) {
+	if language == "" {
+		return dbPhrases, errors.New("url or language is empty")
+	}
+
+	err = json.Unmarshal(r.Body, &dbPhrases)
+	if err != nil {
+		return []databasePhrase{}, err
+	}
+
+	// Here we jump the first line to not process the headers.
+	// Maybe a flag or describe in help message to warn the final user?
+	for _, item := range dbPhrases {
+		// Don't input in database if author or phrase is empty.
+		if item.Phrase == "" || item.Author == "" {
+			slog.Info(fmt.Sprintf("Author or phrase is empty: author=\"%s\" phrase=\"%s\"", item.Author, item.Phrase))
+			continue
+		}
+
+		phraseHash := generateHash(item.Phrase)
+		phrase := databasePhrase{
+			ContentHash: r.BodyHash,
+			Author:      item.Author,
+			Phrase:      item.Phrase,
+			PhraseHash:  phraseHash,
+			Language:    language,
+		}
+		dbPhrases = append(dbPhrases, phrase)
+	}
+
+	return dbPhrases, nil
 }
 
 func generateHash(data string) string {

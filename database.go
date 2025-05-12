@@ -7,6 +7,7 @@ import (
 	"embed"
 	"encoding/binary"
 	"errors"
+	"fmt"
 	"github.com/mitchellh/go-homedir"
 	"github.com/wvoliveira/motivar/data"
 	"log/slog"
@@ -21,7 +22,6 @@ import (
 var embedContent embed.FS
 
 type databasePhrase struct {
-	URL         string
 	ContentHash string
 	Author      string
 	Phrase      string
@@ -54,7 +54,7 @@ func (d *database) ConnectAndTest() {
 func (d *database) RunMigrations() {
 	dir, err := embedContent.ReadDir("migrations")
 	if err != nil {
-		slog.Error("Error reading migrations folder: %v", err)
+		slog.Error(fmt.Sprintf("Error reading migrations folder: %v", err))
 		os.Exit(1)
 	}
 	for _, file := range dir {
@@ -66,7 +66,11 @@ func (d *database) RunMigrations() {
 	}
 }
 
-func (d *database) InsertPhrases(phrases []databasePhrase, contentHash string) (err error) {
+func (d *database) InsertPhrases(phrases []databasePhrase, url, contentHash string) (err error) {
+	if len(phrases) == 0 {
+		return errors.New("no phrases to insert")
+	}
+
 	tx, err := d.conn.Begin()
 	if err != nil {
 		return
@@ -88,7 +92,7 @@ func (d *database) InsertPhrases(phrases []databasePhrase, contentHash string) (
 
 	now := time.Now()
 	hashID := generateHashTimestamp()
-	_, err = stHash.Exec(hashID, phrases[0].URL, contentHash, now, now)
+	_, err = stHash.Exec(hashID, url, contentHash, now, now)
 	if err != nil {
 		return
 	}

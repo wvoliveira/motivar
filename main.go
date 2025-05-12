@@ -114,7 +114,9 @@ func main() {
 			die(err)
 
 			err := fetchAndSave(&db, flagsAdd.Format, flagsAdd.URL, flagsAdd.Language)
-			die(err)
+			if err != nil {
+				logg.Error(err.Error())
+			}
 			return
 		}
 	}
